@@ -2,7 +2,7 @@
 
 # 🌊 Hydro-Resource-Hub
 
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Global Water Data and Tech" width="100%" style="border-radius: 12px; margin-bottom: 15px;">
+<img src="https://unsplash.com/photos/a-view-of-the-earth-from-space-8D55FR1k4mA?auto=format&fit=crop&w=1200&q=80" alt="Global Water Data and Tech" width="100%" style="border-radius: 12px; margin-bottom: 15px;">
 
 <br/>
 
