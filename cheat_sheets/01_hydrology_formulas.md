@@ -4,6 +4,30 @@ A comprehensive, deep-dive reference guide to the fundamental and advanced equat
 
 ---
 
+## 📑 Table of Contents
+- [🌊 Fluid Mechanics & Pipe Flow](#-fluid-mechanics--pipe-flow)
+  - [1. Bernoulli's Equation](#1-bernoullis-equation-conservation-of-energy)
+  - [2. Darcy-Weisbach Equation](#2-darcy-weisbach-equation)
+  - [3. Hazen-Williams Equation](#3-hazen-williams-equation)
+- [🏞️ Open Channel Hydraulics](#️-open-channel-hydraulics)
+  - [4. Manning's Equation](#4-mannings-equation)
+  - [5. Froude Number](#5-froude-number)
+  - [6. Chézy Equation](#6-chézy-equation)
+- [🌧️ Surface Water Hydrology](#️-surface-water-hydrology)
+  - [7. SCS Curve Number (CN) Method](#7-scs-curve-number-cn-method)
+  - [8. Green-Ampt Infiltration Model](#8-green-ampt-infiltration-model)
+  - [9. Muskingum Routing Method](#9-muskingum-routing-method)
+  - [10. Penman-Monteith Equation](#10-penman-monteith-equation)
+  - [11. Rational Method](#11-rational-method)
+  - [12. Horton's Infiltration Equation](#12-hortons-infiltration-equation)
+- [🪨 Groundwater Hydrology](#-groundwater-hydrology)
+  - [13. Darcy's Law](#13-darcys-law)
+  - [14. Dupuit Equation](#14-dupuit-equation-unconfined-aquifer-flow)
+  - [15. Theis Equation](#15-theis-equation)
+  - [16. Thiem Equation](#16-thiem-equation-steady-state-confined-flow)
+
+---
+
 ## 🌊 Fluid Mechanics & Pipe Flow
 
 ### 1. Bernoulli's Equation (Conservation of Energy)
