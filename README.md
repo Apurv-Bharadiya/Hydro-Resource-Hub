@@ -1,56 +1,58 @@
 # 💧 Hydro-Resource-Hub
 
-Welcome to the **Hydro-Resource-Hub**, a centralized, open-source knowledge base dedicated to Water Resources Engineering, computational hydrology, and hydraulic modeling. 
+Welcome to the **Hydro-Resource-Hub**, a centralized knowledge base dedicated to Water Resources Engineering, computational hydrology, and hydraulic modeling. 
 
-As water management becomes increasingly data-driven, bridging the gap between traditional civil engineering and modern computational tools is essential. This repository serves as a curated directory of free software, spatial analysis tools, public datasets, and Python libraries designed to assist engineers, researchers, and students in analyzing, modeling, and managing water systems effectively.
+This repository serves as a curated directory of software, spatial analysis tools, public datasets, and emerging technologies. It is designed to assist engineers, researchers, and students in analyzing, modeling, and managing water systems effectively.
 
-## 🗺️ GIS & Spatial Analysis
-* [QGIS](https://qgis.org/) - A professional-grade, open-source Geographic Information System (GIS). Essential for manipulating spatial data, mapping flood zones, and preparing digital elevation models (DEMs) before importing them into hydrological models.
-* [GRASS GIS](https://grass.osgeo.org/) - A powerful GIS software suite used for geospatial data management and spatial modeling. It is particularly strong in raster processing and complex terrain analysis.
-* [WhiteboxTools](https://www.whiteboxgeo.com/manual/wbt_book/intro.html) - An advanced geospatial data analysis platform. It contains highly optimized tools for hydrological analysis, such as watershed delineation, flow accumulation, and stream network extraction.
-
-## 🌊 Hydrological & Hydraulic Modeling
-* [EPA SWMM](https://www.epa.gov/water-research/storm-water-management-model-swmm) - The Storm Water Management Model. A dynamic rainfall-runoff simulation model used for single-event or long-term simulation of runoff quantity and quality from primarily urban areas.
-* [EPANET](https://www.epa.gov/water-research/epanet) - A widely used software application used to model the hydraulic and water quality behavior of water distribution piping systems. 
-* [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/) - Developed by the US Army Corps of Engineers, this River Analysis System allows you to perform one-dimensional steady flow, one and two-dimensional unsteady flow calculations, and sediment transport modeling.
-* [SWAT](https://swat.tamu.edu/) - The Soil and Water Assessment Tool. A basin-scale, continuous-time model used extensively in academic research to simulate the quality and quantity of surface and ground water and predict the environmental impact of land use and agricultural practices.
-* [MODFLOW](https://www.usgs.gov/software/modflow-6-usgs-modular-hydrologic-model) - The USGS's modular finite-difference flow model, which is the international standard for simulating and predicting groundwater conditions and groundwater/surface-water interactions.
-
-## 📊 Public Datasets & Satellite Imagery
-* [USGS Water Data for the Nation](https://waterdata.usgs.gov/nwis) - Provides access to water-resources data collected at approximately 1.9 million sites across the United States, useful for testing models and algorithms.
-* [India WRIS](https://indiawris.gov.in/wris/) - The Water Resources Information System of India. A comprehensive portal providing regional data on rainfall, surface water, groundwater, and water quality.
-* [Copernicus Open Access Hub](https://scihub.copernicus.eu/) - Provides complete, free, and open access to Sentinel-1, Sentinel-2, and Sentinel-3 satellite data, which is critical for remote sensing of water bodies and soil moisture.
-* [EarthExplorer](https://earthexplorer.usgs.gov/) - The primary portal for downloading digital elevation models (DEMs), Landsat imagery, and other geospatial datasets necessary for watershed mapping.
-
-## 🐍 Python Libraries for Water Engineers
-* `geopandas` - Extends the datatypes used by `pandas` to allow spatial operations on geometric types. It makes working with vector data (shapefiles) in Python incredibly straightforward.
-* `rasterio` - A library for reading and writing geospatial raster data (like GeoTIFFs). It allows you to analyze elevation data or satellite imagery directly within a Python script.
-* `HydroStats` - A library specifically designed for computing error metrics (like Nash-Sutcliffe Efficiency or RMSE) to evaluate the accuracy of your hydrological models against observed data.
-* `pyswmm` - A Python wrapper for EPA SWMM. It allows you to programmatically interact with the SWMM engine, enabling you to change node or link parameters dynamically during a simulation—perfect for testing real-time control algorithms.
-
-## ☁️ Climate & Meteorological Data
-* [ERA5 (Copernicus)](https://cds.climate.copernicus.eu/) - The fifth generation ECMWF atmospheric reanalysis of the global climate. Essential for retrieving historical precipitation, temperature, and evaporation data when local gauge data is missing.
-* [CHIRPS](https://www.chc.ucsb.edu/data/chirps) - Climate Hazards Group InfraRed Precipitation with Station data. A 35+ year quasi-global rainfall dataset, highly useful for trend analysis and drought monitoring.
-* [WorldClim](https://www.worldclim.org/) - Global climate data for ecological modeling and GIS, providing high-resolution average monthly climate data.
-
-## 🧪 Water Quality & Environmental Modeling
-* [WASP](https://www.epa.gov/ceam/water-quality-analysis-simulation-program-wasp) - The Water Quality Analysis Simulation Program by the EPA. Helps users interpret and predict water quality responses to natural phenomena and man-made pollution in rivers, lakes, and estuaries.
-* [CE-QUAL-W2](http://www.ce.pdx.edu/w2/) - A water quality and hydrodynamic model in 2D (longitudinal-vertical) for rivers, estuaries, lakes, reservoirs, and river basin systems.
-* [InVEST](https://naturalcapitalproject.stanford.edu/software/invest) - A suite of free, open-source software models used to map and value the goods and services from nature, including water yield and nutrient retention.
-
-## 📈 R Packages for Statistical Hydrology
-*While Python is great for spatial analysis, R is deeply ingrained in academic hydrology for statistical analysis.*
-* `HydroGOF` - An R package designed for Goodness-of-fit functions for comparison of simulated and observed hydrological time series (calculates NSE, RMSE, PBIAS, etc.).
-* `dataRetrieval` - Created by the USGS, this package is designed to obtain USGS or EPA water quality and hydrology data directly into R for analysis.
-* `fasstr` - Flow Analysis Summary Statistics Tool for R. Functions to tidy, summarize, analyze, trend, and visualize streamflow data.
-
-## ⚖️ Water Allocation & System Management
-* [Pywr](https://pywr.github.io/pywr-docs/) - A Python library for water resource system simulation and optimization. Great for modeling how water should be distributed among agriculture, cities, and industry in a river basin.
-* [WEAP](https://www.weap21.org/) - Water Evaluation And Planning system. (Note: Requires a license, but free for academic users in developing countries). A user-friendly software tool that takes an integrated approach to water resources planning.
-
-## 📚 Open Educational Resources
-* [HydroLearn](https://www.hydrolearn.org/) - An open-source platform for active learning modules in hydrology and water resources engineering.
-* [CUAHSI](https://www.cuahsi.org/) - Consortium of Universities for the Advancement of Hydrologic Science. Provides a wealth of data sets, educational materials, and cyberinfrastructure for water researchers.
+### 🏷️ Usage Metadata Key
+* **[Ind]** = **Industry** (Commercial and private sector engineering firms)
+* **[Con]** = **Consulting** (Specialized engineering and environmental consultants)
+* **[Gov]** = **Government** (Federal, state, and local water agencies / municipalities)
+* **[Aca]** = **Academia/Research** (Universities, research scholars, and postgraduate studies)
 
 ---
-*Maintained by [Apurv Bharadiya]*
+
+## 🗺️ GIS, Remote Sensing & Spatial Analysis
+* [QGIS](https://qgis.org/) `[Con] [Gov] [Aca]` - A professional-grade, open-source Geographic Information System (GIS) for manipulating spatial data and mapping flood zones.
+* [ArcGIS](https://www.esri.com/) `[Ind] [Con] [Gov]` - The industry standard commercial GIS software for deep spatial analytics and enterprise mapping.
+* [Google Earth Engine](https://earthengine.google.com/) `[Aca] [Gov] [Ind]` - A planetary-scale platform for earth science data and analysis, highly utilized for remote sensing using Python/JavaScript.
+* [Landsat & Sentinel](https://scihub.copernicus.eu/) `[Aca] [Gov]` - Core satellite imagery programs used for land use change, soil moisture, and large-scale water body tracking.
+* [TRMM / GPM](https://gpm.nasa.gov/) `[Aca] [Gov]` - Tropical Rainfall Measuring Mission and Global Precipitation Measurement; critical satellite-based rainfall data.
+* [MODIS](https://modis.gsfc.nasa.gov/) `[Aca] [Gov]` - Satellite-based instruments used for tracking the global water cycle, snow cover, and evapotranspiration.
+
+## 🌊 Hydrological & Hydraulic Modeling
+* [EPA SWMM](https://www.epa.gov/water-research/storm-water-management-model-swmm) `[Con] [Gov] [Aca]` - A dynamic rainfall-runoff simulation model used for urban stormwater management.
+* [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/) `[Ind] [Con] [Gov]` - Developed by the US Army Corps of Engineers for 1D/2D river routing and floodplain modeling.
+* [SWAT](https://swat.tamu.edu/) `[Aca] [Gov]` - The Soil and Water Assessment Tool. A continuous-time model to simulate surface/groundwater quality and predict environmental impacts.
+* [MIKE Powered by DHI](https://www.mikepoweredbydhi.com/) `[Ind] [Con] [Gov]` - A premier commercial software suite for advanced 2D/3D modeling of water environments (flooding, coastlines, rivers).
+* [HSPF](https://www.epa.gov/ceam/hydrological-simulation-program-fortran-hspf) `[Gov] [Con]` - Hydrological Simulation Program - FORTRAN; used for simulating watershed hydrology and water quality.
+
+## 💧 Groundwater & Subsurface Modeling
+* [MODFLOW](https://www.usgs.gov/software/modflow-6-usgs-modular-hydrologic-model) `[Gov] [Con] [Aca]` - The USGS's modular finite-difference flow model, the international standard for groundwater simulation.
+* [HydroGeoSphere](https://www.aquanty.com/hydrogeosphere) `[Con] [Aca]` - A fully integrated 3D surface/subsurface flow and transport model.
+
+## 🧪 Water Quality & Distribution
+* [EPANET](https://www.epa.gov/water-research/epanet) `[Ind] [Con] [Aca]` - Models the hydraulic and water quality behavior of pressurized water distribution piping systems. 
+* [QUAL2K](https://www.epa.gov/ceam/water-quality-models-qual2k) `[Gov] [Con] [Aca]` - A river and stream water quality model used to simulate the movement of pollutants.
+
+## ⚙️ Decision Support Systems (DSS) & Management
+* [WEAP](https://www.weap21.org/) `[Gov] [Con] [Aca]` - Water Evaluation And Planning system. Takes an integrated approach to water resources policy and allocation.
+* [AQUATOOL](https://aquatool.webs.upv.es/) `[Aca] [Gov]` - A decision support system for water resources planning and basin management.
+* [HydroDSS](https://www.hydrodss.org/) `[Aca] [Gov]` - Frameworks integrating simulation models with decision-making tools for water managers.
+
+## 🎯 Calibration & Parameter Estimation
+* [SWAT-CUP](https://swat.tamu.edu/software/swat-cup/) `[Aca] [Gov]` - A computer program for the calibration of SWAT models.
+* [PEST](https://pesthomepage.org/) `[Con] [Aca] [Ind]` - The industry standard software package for model-independent parameter estimation and uncertainty analysis.
+
+## ☁️ Cloud Platforms & Web Tools
+* [HydroServer](https://hydroserver.org/) `[Aca] [Gov]` - Tools for sharing and hosting hydrological time-series data on the web.
+* [DHI Cloud Platforms](https://www.mikepoweredbydhi.com/products/mike-cloud) `[Ind] [Con]` - Cloud-based collaboration and simulation hosting for commercial MIKE models.
+* [NASA POWER](https://power.larc.nasa.gov/) `[Aca] [Gov]` - Provides solar and meteorological data sets from NASA research for support of renewable energy, building energy efficiency, and agricultural needs.
+
+## 🤖 Emerging Tech: AI & ML in Hydrology
+* [TensorFlow](https://www.tensorflow.org/) `[Ind] [Aca]` - Google's open-source machine learning framework, increasingly used for deep learning rainfall-runoff models (like LSTMs).
+* [PyTorch](https://pytorch.org/) `[Ind] [Aca]` - A popular ML framework favored in academic research for developing predictive hydrological models.
+* [Scikit-Learn](https://scikit-learn.org/) `[Ind] [Con] [Aca]` - Standard Python library for traditional machine learning, useful for clustering, regression, and gap-filling missing streamflow data.
+
+---
+*Maintained by Apurv Bharadiya*
