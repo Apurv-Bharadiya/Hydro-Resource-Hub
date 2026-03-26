@@ -28,5 +28,29 @@ As water management becomes increasingly data-driven, bridging the gap between t
 * `HydroStats` - A library specifically designed for computing error metrics (like Nash-Sutcliffe Efficiency or RMSE) to evaluate the accuracy of your hydrological models against observed data.
 * `pyswmm` - A Python wrapper for EPA SWMM. It allows you to programmatically interact with the SWMM engine, enabling you to change node or link parameters dynamically during a simulation—perfect for testing real-time control algorithms.
 
+## ☁️ Climate & Meteorological Data
+* [ERA5 (Copernicus)](https://cds.climate.copernicus.eu/) - The fifth generation ECMWF atmospheric reanalysis of the global climate. Essential for retrieving historical precipitation, temperature, and evaporation data when local gauge data is missing.
+* [CHIRPS](https://www.chc.ucsb.edu/data/chirps) - Climate Hazards Group InfraRed Precipitation with Station data. A 35+ year quasi-global rainfall dataset, highly useful for trend analysis and drought monitoring.
+* [WorldClim](https://www.worldclim.org/) - Global climate data for ecological modeling and GIS, providing high-resolution average monthly climate data.
+
+## 🧪 Water Quality & Environmental Modeling
+* [WASP](https://www.epa.gov/ceam/water-quality-analysis-simulation-program-wasp) - The Water Quality Analysis Simulation Program by the EPA. Helps users interpret and predict water quality responses to natural phenomena and man-made pollution in rivers, lakes, and estuaries.
+* [CE-QUAL-W2](http://www.ce.pdx.edu/w2/) - A water quality and hydrodynamic model in 2D (longitudinal-vertical) for rivers, estuaries, lakes, reservoirs, and river basin systems.
+* [InVEST](https://naturalcapitalproject.stanford.edu/software/invest) - A suite of free, open-source software models used to map and value the goods and services from nature, including water yield and nutrient retention.
+
+## 📈 R Packages for Statistical Hydrology
+*While Python is great for spatial analysis, R is deeply ingrained in academic hydrology for statistical analysis.*
+* `HydroGOF` - An R package designed for Goodness-of-fit functions for comparison of simulated and observed hydrological time series (calculates NSE, RMSE, PBIAS, etc.).
+* `dataRetrieval` - Created by the USGS, this package is designed to obtain USGS or EPA water quality and hydrology data directly into R for analysis.
+* `fasstr` - Flow Analysis Summary Statistics Tool for R. Functions to tidy, summarize, analyze, trend, and visualize streamflow data.
+
+## ⚖️ Water Allocation & System Management
+* [Pywr](https://pywr.github.io/pywr-docs/) - A Python library for water resource system simulation and optimization. Great for modeling how water should be distributed among agriculture, cities, and industry in a river basin.
+* [WEAP](https://www.weap21.org/) - Water Evaluation And Planning system. (Note: Requires a license, but free for academic users in developing countries). A user-friendly software tool that takes an integrated approach to water resources planning.
+
+## 📚 Open Educational Resources
+* [HydroLearn](https://www.hydrolearn.org/) - An open-source platform for active learning modules in hydrology and water resources engineering.
+* [CUAHSI](https://www.cuahsi.org/) - Consortium of Universities for the Advancement of Hydrologic Science. Provides a wealth of data sets, educational materials, and cyberinfrastructure for water researchers.
+
 ---
 *Maintained by [Apurv Bharadiya]*
