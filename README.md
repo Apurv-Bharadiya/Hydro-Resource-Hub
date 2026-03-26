@@ -6,9 +6,9 @@
 
 <br/>
 
-[![Hub](https://img.shields.io/badge/Hydro_Resource-Hub-0F172A?style=for-the-badge&logo=googleearth&logoColor=00E5FF)](#)
-[![Domain](https://img.shields.io/badge/Domain-Water_Engineering-0F172A?style=for-the-badge&logo=dataversioncontrol&logoColor=00E5FF)](#)
-[![Status](https://img.shields.io/badge/Ecosystem-Open_Source-0F172A?style=for-the-badge&logo=opensourceinitiative&logoColor=00E5FF)](#)
+[![Domain](https://img.shields.io/badge/Domain-Hydro%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff)](#)
+[![Ecosystem](https://img.shields.io/badge/Ecosystem-Open%20Source-10B981?style=flat-square&logo=github&logoColor=white&labelColor=047857)](#)
+[![Scale](https://img.shields.io/badge/Scale-Planetary%20Data-8B5CF6?style=flat-square&logo=googleearth&logoColor=white&labelColor=5B21B6)](#)
 
 <br/>
 
