@@ -2,21 +2,17 @@
 
 # 🌊 Hydro-Resource-Hub
 
-<img src="https://unsplash.com/photos/a-view-of-the-earth-from-space-8D55FR1k4mA?auto=format&fit=crop&w=1200&q=80" alt="Global Water Data and Tech" width="100%" style="border-radius: 12px; margin-bottom: 15px;">
-
-<br/>
-
-[![Domain](https://img.shields.io/badge/Domain-Hydro%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff)](#)
+[![Domain](https://img.shields.io/badge/Domain-Water%20Resources%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff)](#)
 [![Ecosystem](https://img.shields.io/badge/Ecosystem-Open%20Source-10B981?style=flat-square&logo=github&logoColor=white&labelColor=047857)](#)
 [![Scale](https://img.shields.io/badge/Scale-Planetary%20Data-8B5CF6?style=flat-square&logo=googleearth&logoColor=white&labelColor=5B21B6)](#)
 
 <br/>
 
-**A high-performance, open-source ecosystem bridging traditional hydrology with advanced computational science, AI, and geospatial data.**
+**A comprehensive compilation of open-source software, public datasets, and computational tools for Water Resources Engineering and hydrological modelling.**
 
 ---
 
-*Welcome to the Hub. 🌍 Engineered for graduate researchers, data scientists, and civil engineers, this repository serves as a centralized command center for modern water management. Explore industry-standard software, harness planetary-scale satellite datasets, and deploy machine learning models to solve complex hydrological challenges.*
+*Welcome to the Hub. 🌍 Engineered for graduate researchers, data scientists, and civil engineers, this repository serves as a centralized command centre for modern water management. Explore industry-standard software, harness planetary-scale satellite datasets, and deploy machine learning models to solve complex hydrological challenges.*
 
 </div>
 
