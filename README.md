@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🌊 Hydro-Resource-Hub
 
 [![Domain](https://img.shields.io/badge/Domain-Water%20Resources%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff)](#)
@@ -13,8 +11,6 @@
 ---
 
 *Welcome to the Hub. 🌍 Engineered for graduate researchers, data scientists, and civil engineers, this repository serves as a centralized command centre for modern water management. Explore industry-standard software, harness planetary-scale satellite datasets, and deploy machine learning models to solve complex hydrological challenges.*
-
-</div>
 
 ---
 
