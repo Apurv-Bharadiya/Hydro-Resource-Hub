@@ -2,21 +2,21 @@
 
 # 🌊 Hydro-Resource-Hub
 
-<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Water Resources Engineering" width="100%">
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Global Water Data and Tech" width="100%" style="border-radius: 12px; margin-bottom: 15px;">
 
 <br/>
 
-[![Status](https://img.shields.io/badge/Status-Active-0077b6?style=for-the-badge)](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub)
-[![Focus](https://img.shields.io/badge/Focus-Water_Engineering-00b4d8?style=for-the-badge)](#)
-[![Ecosystem](https://img.shields.io/badge/Ecosystem-Open_Source-90e0ef?style=for-the-badge&labelColor=03045e)](#)
+[![Hub](https://img.shields.io/badge/Hydro_Resource-Hub-0F172A?style=for-the-badge&logo=googleearth&logoColor=00E5FF)](#)
+[![Domain](https://img.shields.io/badge/Domain-Water_Engineering-0F172A?style=for-the-badge&logo=dataversioncontrol&logoColor=00E5FF)](#)
+[![Status](https://img.shields.io/badge/Ecosystem-Open_Source-0F172A?style=for-the-badge&logo=opensourceinitiative&logoColor=00E5FF)](#)
 
 <br/>
 
-**A modern, comprehensive ecosystem of open-source software, public datasets, and computational tools built explicitly for Water Resources Engineering.**
+**A high-performance, open-source ecosystem bridging traditional hydrology with advanced computational science, AI, and geospatial data.**
 
 ---
 
-*Welcome to the Hub! 👋 Whether you are a graduate student tackling complex thesis research, a data scientist modelling climate impacts, or a civil engineer optimising urban water grids, this repository is built for you. Our goal is to bridge the gap between traditional hydrology and modern computational science by providing a centralised, collaborative toolkit.*
+*Welcome to the Hub. 🌍 Engineered for graduate researchers, data scientists, and civil engineers, this repository serves as a centralized command centre for modern water management. Explore industry-standard software, harness planetary-scale satellite datasets, and deploy machine learning models to solve complex hydrological challenges.*
 
 </div>
 
