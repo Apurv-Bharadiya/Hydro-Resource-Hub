@@ -274,3 +274,16 @@ $$Q = \frac{2 \pi T (h_2 - h_1)}{\ln(r_2 / r_1)}$$
 > - **📜 Historical Context:** Developed by German hydrologist **Günther Thiem** in 1906, adapting the earlier work of Jules Dupuit.
 > - **✅ Primary Applications:** Analysing aquifer pump test data after the water levels have completely stabilised (reached steady-state) to determine how easily water moves through the confined rock/sand.
 > - **⚠️ Key Limitations:** Cannot be used during the initial hours/days of a pump test when water levels are still actively dropping (you must use the Theis equation for that transient state). Invalid for unconfined aquifers.
+
+<div style="display:none;">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+</div>
