@@ -74,5 +74,28 @@ As water management becomes increasingly data-driven, bridging the gap between t
 * [HydroLearn](https://www.hydrolearn.org/) - An open-source platform for active learning modules in hydrology and water resources engineering.
 * [CUAHSI](https://www.cuahsi.org/) - Consortium of Universities for the Advancement of Hydrologic Science. Provides a wealth of data sets, educational materials, and cyberinfrastructure for water researchers.
 
+## 📋 Master Reference Table
+
+A quick-reference matrix of the critical tools, models, and datasets used in modern Water Resources Engineering.
+
+| Name | Type | Publisher / Agency | Mission / Data Coverage | Primary Use (Why use it?) |
+| :--- | :--- | :--- | :--- | :--- |
+| **QGIS** | GIS Software | Open Source | N/A | Free, professional-grade mapping, DEM processing, and spatial data manipulation. |
+| **Google Earth Engine** | Cloud GIS | Google | Global | Running geospatial algorithms on planetary-scale datasets without downloading them. |
+| **EPA SWMM** | Hydrologic Model | US EPA | N/A | Industry standard for urban stormwater, rainfall-runoff, and sewer simulation. |
+| **HEC-RAS** | Hydraulic Model | US Army Corps | N/A | 1D/2D river flow routing, flood inundation mapping, and sediment transport. |
+| **SWAT** | Basin Model | USDA / Texas A&M | N/A | Long-term basin-scale agricultural, land-use, and environmental impact modelling. |
+| **MODFLOW** | Groundwater Model| USGS | N/A | The definitive global standard for 3D groundwater flow and surface-water interaction. |
+| **EPANET** | Pipe Network Model | US EPA | N/A | Simulating hydraulic and water quality behaviour in pressurised distribution pipes. |
+| **WEAP** | DSS / Allocation | Stockholm Env. Inst. | N/A | Integrated water resources planning, scenario testing, and basin allocation. |
+| **NASA POWER** | Climate Dataset | NASA | Global | Reliable solar and meteorological datasets for hydrology and agricultural modelling. |
+| **TRMM & GPM** | Satellite Dataset | NASA / JAXA | Global (Tropical/Broad) | Crucial for historical and real-time precipitation mapping from space. |
+| **Landsat & Sentinel** | Satellite Imagery | USGS / Copernicus | Global | High-resolution optical imagery for land-use classification and surface water tracking. |
+| **ERA5** | Climate Reanalysis | ECMWF / Copernicus | Global (1940-Present) | Best-in-class historical climate data (precipitation, temperature, evaporation). |
+| **India WRIS** | Public Dataset | Gov. of India | India (Regional) | Centralised portal for Indian river basin data, groundwater levels, and rainfall. |
+| **PEST** | Calibration Tool | Watermark Numerical | N/A | Automates complex model calibration (like MODFLOW) and uncertainty analysis. |
+| **TensorFlow / PyTorch**| AI/ML Frameworks | Google / Meta | N/A | Building advanced deep learning models (like LSTMs) for streamflow/flood forecasting. |
+| **geopandas** | Python Library | Open Source | N/A | Brings spatial data manipulation (shapefiles) directly into Python workflows. |
+
 ---
 *Maintained by Apurv Bharadiya*
