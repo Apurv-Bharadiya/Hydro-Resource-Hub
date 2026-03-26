@@ -1,8 +1,34 @@
+<div align="center">
+
 # 💧 Hydro-Resource-Hub
 
-Welcome to the **Hydro-Resource-Hub**, a centralised, open-source knowledge base dedicated to Water Resources Engineering, computational hydrology, and hydraulic modelling. 
+<img src="https://images.unsplash.com/photo-1542360663-8f4023704c56?q=80&w=1000&auto=format&fit=crop" alt="Water Resources Engineering" width="100%" height="250" style="object-fit: cover; border-radius: 10px;">
 
-As water management becomes increasingly data-driven, bridging the gap between traditional civil engineering and modern computational tools is essential. This repository serves as a curated directory of free software, spatial analysis tools, public datasets, emerging technologies (AI/ML), and programming libraries to assist engineers, researchers, and students in analysing, modelling, and managing water systems effectively.
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Apurv-Bharadiya/Hydro-Resource-Hub)
+[![Open Source](https://img.shields.io/badge/Open%20Source-❤️-red)](#)
+[![Domain](https://img.shields.io/badge/Domain-Water%20Resources%20Engineering-blue)](#)
+
+**A comprehensive compilation of open-source software, public datasets, and computational tools for Water Resources Engineering and hydrological modelling.**
+
+</div>
+
+---
+
+## 📑 Table of Contents
+1. [🗺️ GIS & Spatial Analysis](#️-gis--spatial-analysis)
+2. [🌊 Hydrological & Hydraulic Modeling](#-hydrological--hydraulic-modeling)
+3. [🧪 Water Quality & Environmental Modeling](#-water-quality--environmental-modeling)
+4. [⚖️ Decision Support Systems (DSS) & Water Allocation](#️-decision-support-systems-dss--water-allocation)
+5. [🛰️ Public Datasets, Remote Sensing & Climate Data](#️-public-datasets-remote-sensing--climate-data)
+6. [🎯 Model Calibration & Uncertainty Analysis](#-model-calibration--uncertainty-analysis)
+7. [🐍 Python Libraries for Water Engineers](#-python-libraries-for-water-engineers)
+8. [📈 R Packages for Statistical Hydrology](#-r-packages-for-statistical-hydrology)
+9. [🤖 Emerging Tech: AI & Machine Learning](#-emerging-tech-ai--machine-learning-in-hydrology)
+10. [☁️ Web Tools & Cloud Platforms](#️-web-tools--cloud-platforms)
+11. [📚 Open Educational Resources](#-open-educational-resources)
+12. [📋 Master Reference Table](#-master-reference-table)
+
+---
 
 ## 🗺️ GIS & Spatial Analysis
 * [QGIS](https://qgis.org/) - A professional-grade, open-source Geographic Information System (GIS). Essential for manipulating spatial data, mapping flood zones, and preparing digital elevation models (DEMs) before importing them into hydrological models.
