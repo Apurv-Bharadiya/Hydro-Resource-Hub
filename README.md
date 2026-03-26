@@ -22,4 +22,4 @@ A curated collection of open-source software, public datasets, and computational
 * `HydroStats` - Tools for calculating error metrics for hydrological models.
 
 ---
-*Maintained by [Your Name/GitHub Username]*
+*Maintained by Apurv Bharadiya*
