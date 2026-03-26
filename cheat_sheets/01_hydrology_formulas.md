@@ -1,3 +1,5 @@
+[← Back to Main Hub](../) | [View on GitHub](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub)
+
 # 📐 Hydrology & Fluid Mechanics Master Cheat Sheet
 
 A comprehensive, deep-dive reference guide to the fundamental and advanced equations used in Water Resources Engineering, fluid dynamics, and computational modelling.
