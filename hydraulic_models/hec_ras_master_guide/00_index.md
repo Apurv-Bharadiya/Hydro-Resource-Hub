@@ -1,11 +1,11 @@
 # 🌊 The Ultimate HEC-RAS Master Guide: From Zero to 2D Hydrodynamics
 
 <div align="center">
-  
-  ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-green) ![Estimated Time](https://img.shields.io/badge/Estimated_Time-45%20Minutes-blue) ![Domain](https://img.shields.io/badge/Domain-Hydraulic%20Engineering-orange)
-
-
+  <img src="https://img.shields.io/badge/Level-Beginner%20to%20Advanced-2EA043?style=flat-square&logo=gitbook&logoColor=white&labelColor=238636" alt="Level">
+  <img src="https://img.shields.io/badge/Estimated%20Time-45%20Minutes-007EC6?style=flat-square&logo=clockify&logoColor=white&labelColor=005A9E" alt="Estimated Time">
+  <img src="https://img.shields.io/badge/Domain-Hydraulic%20Engineering-F59E0B?style=flat-square&logo=digitalocean&logoColor=white&labelColor=B45309" alt="Domain">
 </div>
+<br>
 
 > 💡 **Welcome to the ultimate command centre for hydraulic modelling.**
 > 
