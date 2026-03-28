@@ -76,8 +76,4 @@ Once the matrix successfully converges, we open RAS Mapper to analyse the disast
 <br>
 
 ---
-<div align="center">
-  <a href="./08_ras_mapper.md"><b>⬅️ Chapter 08: RAS Mapper & Visualisation</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./10_troubleshooting.md"><b>Chapter 10: Troubleshooting Guide ➡️</b></a>
-</div>
+**[⬅️ Chapter 08: RAS Mapper & Visualisation](./08_ras_mapper.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 10: Troubleshooting Guide ➡️](./10_troubleshooting.md)**
