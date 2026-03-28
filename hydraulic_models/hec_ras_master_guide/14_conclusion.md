@@ -51,7 +51,4 @@ Keep exploring, keep questioning the physics, and never accept a "Successful Com
 <br>
 
 ---
-<div align="center">
-  <a href="./13_github_practices.md"><b>⬅️ Chapter 13: GitHub Best Practices</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a>
-</div>
+**[⬅️ Chapter 13: GitHub Best Practices](./13_github_practices.md)** | **[🏠 Main Index](./00_index.md)**
