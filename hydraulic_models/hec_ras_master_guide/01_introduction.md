@@ -34,8 +34,7 @@ Whether you are conducting research for an M.E. thesis in Water Resources Engine
 <br>
 
 ---
-
 <div align="center">
   🏠 <a href="./00_index.md"><b>Master Index</b></a> | 
-  <a href="./02_installation_setup.md"><b>Chapter 02: Setup ➡️</b></a>
+  <a href="./02_installation_setup.md"><b>Chapter 02: Installation & Setup ➡️</b></a>
 </div>
