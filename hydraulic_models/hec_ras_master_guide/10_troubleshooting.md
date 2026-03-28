@@ -65,8 +65,4 @@ When the simulation finishes, HEC-RAS generates a computation log reporting the 
 <br>
 
 ---
-<div align="center">
-  <a href="./09_case_study_rajkot.md"><b>⬅️ Chapter 09: Case Study (Rajkot)</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./11_pro_tips.md"><b>Chapter 11: Pro Tips & Expert Workflows ➡️</b></a>
-</div>
+**[⬅️ Chapter 09: Case Study (Rajkot)](./09_case_study_rajkot.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 11: Pro Tips & Expert Workflows ➡️](./11_pro_tips.md)**
