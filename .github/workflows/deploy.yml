@@ -10,11 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Configure Python
         uses: actions/setup-python@v5
         with:
           python-version: 3.x
+          
       - name: Install MkDocs Material
         run: pip install mkdocs-material
+        
+      - name: Prepare Docs Directory (The Magic Trick)
+        run: |
+          mkdir docs
+          rsync -av --exclude='docs' --exclude='.git' --exclude='.github' --exclude='mkdocs.yml' ./ docs/
+          
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
