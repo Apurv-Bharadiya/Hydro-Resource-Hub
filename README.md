@@ -25,7 +25,8 @@
 This repository hosts a world-class, 14-chapter modular training manual for [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/). It transitions from basic 1D steady-flow physics to advanced 2D "Rain-on-Grid" urban hydrodynamic simulations.
 
 ### 📑 Guide Roadmap
-| *Section* | *Chapters* | *Highlights* |
+
+| **Section** | **Chapters** | **Highlights** |
 | :--- | :--- | :--- |
 | **🟢 Foundations** | [01](./hydraulic_models/hec_ras_master_guide/01_introduction.md) - [04](./hydraulic_models/hec_ras_master_guide/04_data_requirements.md) | Theory, Installation, and USGS / Bhuvan Data Sourcing. |
 | **🟡 Core Workflows** | [05](./hydraulic_models/hec_ras_master_guide/05_interface_overview.md) - [08](./hydraulic_models/hec_ras_master_guide/08_ras_mapper.md) | 1D/2D Mesh Generation, Breaklines, and RAS Mapper Visualisation. |
