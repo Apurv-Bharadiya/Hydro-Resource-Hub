@@ -42,14 +42,14 @@ This repository hosts a world-class, 14-chapter modular training manual for [HEC
 * [📂 Interactive Templates & Cheat Sheets](#-interactive-templates--cheat-sheets)
 
 1. [🗺️ GIS & Spatial Analysis](#️-gis--spatial-analysis)
-2. [🌊 Hydrological & Hydraulic Modeling](#-hydrological--hydraulic-modeling)
-3. [🧪 Water Quality & Environmental Modeling](#-water-quality--environmental-modeling)
+2. [🌊 Hydrological & Hydraulic Modelling](#-hydrological--hydraulic-modelling)
+3. [🧪 Water Quality & Environmental Modelling](#-water-quality--environmental-modelling)
 4. [⚖️ Decision Support Systems (DSS) & Water Allocation](#️-decision-support-systems-dss--water-allocation)
 5. [🛰️ Public Datasets, Remote Sensing & Climate Data](#️-public-datasets-remote-sensing--climate-data)
 6. [🎯 Model Calibration & Uncertainty Analysis](#-model-calibration--uncertainty-analysis)
 7. [🐍 Python Libraries for Water Engineers](#-python-libraries-for-water-engineers)
 8. [📈 R Packages for Statistical Hydrology](#-r-packages-for-statistical-hydrology)
-9. [🤖 Emerging Tech: AI & Machine Learning](#-emerging-tech-ai--machine-learning-in-hydrology)
+9. [🤖 Emerging Tech: AI & Machine Learning in Hydrology](#-emerging-tech-ai--machine-learning-in-hydrology)
 10. [☁️ Web Tools & Cloud Platforms](#️-web-tools--cloud-platforms)
 11. [📚 Open Educational Resources](#-open-educational-resources)
 12. [📋 Master Reference Table](#-master-reference-table)
@@ -59,9 +59,9 @@ This repository hosts a world-class, 14-chapter modular training manual for [HEC
 ## 📂 Interactive Templates & Cheat Sheets
 We have built actual starter code and reference guides directly into this repository. Click below to view or download them:
 
-* 📝 **[Hydrology & Fluid Mechanics Master Cheat Sheet](./cheat_sheets/hydro_equations_master.md)** - A complete mathematical reference guide for 16 core engineering equations, including their historical context and key limitations.
-* 🐍 **[Simple Hydrograph Plotter](./python_templates/simple_hydrograph.py)** - A beginner-friendly Python script using pandas and matplotlib to visualise synthetic streamflow data.
-* 📡 **[GloFAS River Data Fetcher](./python_templates/glofas_fetcher.py)** - An advanced Python script that connects to the Open-Meteo API to download and plot live, simulated discharge data for international rivers.
+* 📝 **[Hydrology & Fluid Mechanics Master Cheat Sheet](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/cheat_sheets/hydro_equations_master.md)** - A complete mathematical reference guide for 16 core engineering equations, including their historical context and key limitations.
+* 🐍 **[Simple Hydrograph Plotter](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/simple_hydrograph.py)** - A beginner-friendly Python script using pandas and matplotlib to visualise synthetic streamflow data.
+* 📡 **[GloFAS River Data Fetcher](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/glofas_fetcher.py)** - An advanced Python script that connects to the Open-Meteo API to download and plot live, simulated discharge data for international rivers.
 
 ---
 
@@ -179,7 +179,6 @@ We have built actual starter code and reference guides directly into this reposi
 | **TensorFlow / PyTorch** | AI/ML Frameworks | Google / Meta | N/A | Building advanced deep learning models (like LSTMs) for streamflow/flood forecasting. |
 | **geopandas** | Python Library | Open Source | N/A | Brings spatial data manipulation (shapefiles) directly into Python workflows. |
 
-<br>
-<div align="center">
-  <i>Maintained by Apurv Bharadiya</i>
-</div>
+
+---
+**<i> Maintained by Apurv Bharadiya </i>** 
