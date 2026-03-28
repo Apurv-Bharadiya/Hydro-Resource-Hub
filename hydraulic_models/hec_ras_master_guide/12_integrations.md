@@ -47,4 +47,9 @@ Do not rely on outdated local hard drives for your base data. Connect directly t
 
 <br>
 
-⬅️ **Previous:** [Chapter 11: Pro Tips & Expert Workflows](./11_pro_tips.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 13: GitHub Best Practices for Hydraulic Models](./13_github_practices.md)
+---
+<div align="center">
+  <a href="./11_pro_tips.md"><b>⬅️ Chapter 11: Pro Tips & Expert Workflows</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./13_github_practices.md"><b>Chapter 13: GitHub Best Practices ➡️</b></a>
+</div>
