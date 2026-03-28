@@ -66,7 +66,5 @@
 
 ---
 
-<div align="center">
-  <b>Ready to begin?</b><br><br>
-  <a href="./01_introduction.md"><b>Start Chapter 01: Introduction ➡️</b></a>
-</div>
+---
+**[🏠 Back to Hub README](../../README.md)** | **[Start Chapter 01: Introduction ➡️](./01_introduction.md)**
