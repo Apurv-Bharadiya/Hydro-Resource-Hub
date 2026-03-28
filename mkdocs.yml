@@ -47,5 +47,5 @@ nav:
     - 'Chapter 12: Integrations': hydraulic_models/hec_ras_master_guide/12_integrations.md
     - 'Chapter 13: GitHub': hydraulic_models/hec_ras_master_guide/13_github_practices.md
     - 'Chapter 14: Conclusion': hydraulic_models/hec_ras_master_guide/14_conclusion.md
-    - '📂 Resources':
-    - 'Master Cheat Sheet': cheat_sheets/hydro_equations_master.md
+  - '📂 Resources':
+    - 'Master Cheat Sheet': cheat_sheets/01_hydrology_formulas.md
