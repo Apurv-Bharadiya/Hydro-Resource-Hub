@@ -103,4 +103,9 @@ Do not just accept a "Successful Compute" message. You must review the physics.
 
 <br>
 
-⬅️ **Previous:** [Chapter 5: Interface Overview](./05_interface_overview.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 7: 2D Modeling Workflow](./07_2d_modeling.md)
+---
+<div align="center">
+  <a href="./05_interface_overview.md"><b>⬅️ Chapter 05: Interface Overview</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./07_2d_modeling.md"><b>Chapter 07: 2D Modelling Workflow ➡️</b></a>
+</div>
