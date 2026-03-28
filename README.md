@@ -14,6 +14,23 @@
 
 ---
 
+## 🚀 Featured: The Ultimate HEC-RAS Master Guide
+![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-green) ![Time](https://img.shields.io/badge/Time-45%20Minutes-blue) ![Domain](https://img.shields.io/badge/Domain-Hydraulic%20Engineering-orange)
+
+This repository hosts a world-class, 14-chapter modular training manual for [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/). It transitions from basic 1D steady-flow physics to advanced 2D "Rain-on-Grid" urban hydrodynamic simulations.
+
+### 📑 Guide Roadmap
+| Section | Chapters | Highlights |
+| :--- | :--- | :--- |
+| **🟢 Foundations** | [01](./hydraulic_models/hec_ras_master_guide/01_introduction.md) - [04](./hydraulic_models/hec_ras_master_guide/04_data_requirements.md) | Theory, Installation, and [USGS](https://earthexplorer.usgs.gov/) / [Bhuvan](https://bhuvan.nrsc.gov.in/) Data Sourcing. |
+| **🟡 Core Workflows** | [05](./hydraulic_models/hec_ras_master_guide/05_interface_overview.md) - [08](./hydraulic_models/hec_ras_master_guide/08_ras_mapper.md) | 1D/2D Mesh Generation, Breaklines, and [RAS Mapper](https://www.hec.usace.army.mil/software/hec-ras/) Visualization. |
+| **🔴 Advanced Apps** | [09](./hydraulic_models/hec_ras_master_guide/09_case_study_rajkot.md) - [12](./hydraulic_models/hec_ras_master_guide/12_integrations.md) | Rajkot Urban Case Study, Troubleshooting, and [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/) Integration. |
+| **🐙 Management** | [13](./hydraulic_models/hec_ras_master_guide/13_github_practices.md) - [14](./hydraulic_models/hec_ras_master_guide/14_conclusion.md) | GitHub Best Practices for heavy models and Career Next Steps. |
+
+👉 **[Start the Master Guide here: Chapter 0 - Index](./hydraulic_models/hec_ras_master_guide/00_index.md)**
+
+---
+
 ## 📑 Table of Contents
 
 * [📂 Interactive Templates & Cheat Sheets](#-interactive-templates--cheat-sheets)
