@@ -50,4 +50,8 @@ Keep exploring, keep questioning the physics, and never accept a "Successful Com
 
 <br>
 
-⬅️ **Previous:** [Chapter 13: GitHub Best Practices](./13_github_practices.md) | 🏠 **[Back to Master Index](./00_index.md)** 
+---
+<div align="center">
+  <a href="./13_github_practices.md"><b>⬅️ Chapter 13: GitHub Best Practices</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a>
+</div>
