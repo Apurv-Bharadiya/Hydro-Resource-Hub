@@ -123,4 +123,9 @@ Provide explicit, idiot-proof instructions for the user.
 
 <br>
 
-⬅️ **Previous:** [Chapter 12: Integration with Other Tools](./12_integrations.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 14: Conclusion & Next Steps](./14_conclusion.md)
+---
+<div align="center">
+  <a href="./12_integrations.md"><b>⬅️ Chapter 12: Software Integrations</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./14_conclusion.md"><b>Chapter 14: Conclusion ➡️</b></a>
+</div>
