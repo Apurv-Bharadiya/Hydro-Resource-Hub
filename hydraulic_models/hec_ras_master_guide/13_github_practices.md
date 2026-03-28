@@ -124,8 +124,4 @@ Provide explicit, idiot-proof instructions for the user.
 <br>
 
 ---
-<div align="center">
-  <a href="./12_integrations.md"><b>⬅️ Chapter 12: Software Integrations</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./14_conclusion.md"><b>Chapter 14: Conclusion ➡️</b></a>
-</div>
+**[⬅️ Chapter 12: Software Integrations](./12_integrations.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 14: Conclusion ➡️](./14_conclusion.md)**
