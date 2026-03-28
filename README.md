@@ -15,7 +15,7 @@
 ---
 
 ## 🚀 Featured: The Ultimate HEC-RAS Master Guide
-![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-green) ![Time](https://img.shields.io/badge/Time-45%20Minutes-blue) ![Domain](https://img.shields.io/badge/Domain-Hydraulic%20Engineering-orange)
+![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-green) ![Estimated Time](https://img.shields.io/badge/Estimated_Time-45%20Minutes-blue) ![Domain](https://img.shields.io/badge/Domain-Hydraulic%20Engineering-orange)
 
 This repository hosts a world-class, 14-chapter modular training manual for [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/). It transitions from basic 1D steady-flow physics to advanced 2D "Rain-on-Grid" urban hydrodynamic simulations.
 
