@@ -62,8 +62,4 @@ Do not blanket a $500 \text{ km}^2$ watershed with a $5\text{m}$ grid. The simul
 <br>
 
 ---
-<div align="center">
-  <a href="./10_troubleshooting.md"><b>⬅️ Chapter 10: Troubleshooting Guide</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./12_integrations.md"><b>Chapter 12: Software Integrations ➡️</b></a>
-</div>
+**[⬅️ Chapter 10: Troubleshooting Guide](./10_troubleshooting.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 12: Software Integrations ➡️](./12_integrations.md)**
