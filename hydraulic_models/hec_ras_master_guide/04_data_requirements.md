@@ -80,4 +80,9 @@ Time-series data is notoriously messy. A single missing data point (`NaN`) will 
 
 <br>
 
-⬅️ **Previous:** [Chapter 3: Fundamental Concepts](./03_fundamental_concepts.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 5: HEC-RAS Interface](./05_interface_overview.md)
+---
+<div align="center">
+  <a href="./03_fundamental_concepts.md"><b>⬅️ Chapter 03: Fundamental Concepts</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./05_interface_overview.md"><b>Chapter 05: Interface Overview ➡️</b></a>
+</div>
