@@ -71,4 +71,9 @@ While RAS Mapper is an exceptional diagnostic tool, it lacks the layout features
 
 <br>
 
-⬅️ **Previous:** [Chapter 7: Advanced 2D Modeling Workflow](./07_2d_modeling.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 9: Case Study (Rajkot Urban Flooding)](#)
+---
+<div align="center">
+  <a href="./07_2d_modeling.md"><b>⬅️ Chapter 07: 2D Modelling Workflow</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./09_case_study_rajkot.md"><b>Chapter 09: Case Study (Rajkot) ➡️</b></a>
+</div>
