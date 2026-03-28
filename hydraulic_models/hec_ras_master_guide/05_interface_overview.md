@@ -79,4 +79,9 @@ A massive point of confusion for beginners: You can edit geometry in *both* the 
 
 <br>
 
-⬅️ **Previous:** [Chapter 4: Data Requirements](./04_data_requirements.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 6: 1D Modeling Workflow](./06_1d_modeling.md)
+---
+<div align="center">
+  <a href="./04_data_requirements.md"><b>⬅️ Chapter 04: Data Requirements</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./06_1d_modeling.md"><b>Chapter 06: 1D Modelling Workflow ➡️</b></a>
+</div>
