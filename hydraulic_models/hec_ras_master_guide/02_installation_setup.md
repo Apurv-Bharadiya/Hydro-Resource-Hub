@@ -34,4 +34,9 @@ While HEC-RAS *can* run on basic laptops, professional-grade 2D simulations requ
 
 <br>
 
-⬅️ **Previous:** [Chapter 1: Introduction](./01_introduction.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 3: Fundamental Concepts](./03_fundamental_concepts.md)
+---
+<div align="center">
+  <a href="./01_introduction.md"><b>⬅️ Chapter 01: Introduction</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./03_fundamental_concepts.md"><b>Chapter 03: Fundamental Concepts ➡️</b></a>
+</div>
