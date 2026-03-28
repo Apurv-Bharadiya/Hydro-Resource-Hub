@@ -72,8 +72,4 @@ While RAS Mapper is an exceptional diagnostic tool, it lacks the layout features
 <br>
 
 ---
-<div align="center">
-  <a href="./07_2d_modeling.md"><b>⬅️ Chapter 07: 2D Modelling Workflow</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./09_case_study_rajkot.md"><b>Chapter 09: Case Study (Rajkot) ➡️</b></a>
-</div>
+**[⬅️ Chapter 07: 2D Modelling Workflow](./07_2d_modeling.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 09: Case Study (Rajkot) ➡️](./09_case_study_rajkot.md)**
