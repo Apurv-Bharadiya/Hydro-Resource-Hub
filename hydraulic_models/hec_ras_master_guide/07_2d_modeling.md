@@ -83,4 +83,9 @@ If your 2D model crashes with a "Matrix will not converge" error, **cut your com
 
 <br>
 
-⬅️ **Previous:** [Chapter 6: 1D Modeling Workflow](./06_1d_modeling.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 8: RAS Mapper](./08_ras_mapper.md)
+---
+<div align="center">
+  <a href="./06_1d_modeling.md"><b>⬅️ Chapter 06: 1D Modelling Workflow</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./08_ras_mapper.md"><b>Chapter 08: RAS Mapper & Visualisation ➡️</b></a>
+</div>
