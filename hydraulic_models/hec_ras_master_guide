@@ -1,0 +1,18 @@
+Hydro-Resource-Hub/
+└── hydraulic_models/
+    └── hec_ras_master_guide/
+        ├── 00_index.md                  <-- The Main Navigation Hub
+        ├── 01_introduction.md
+        ├── 02_installation_setup.md
+        ├── 03_fundamental_concepts.md
+        ├── 04_data_requirements.md      <-- Provided below!
+        ├── 05_interface_overview.md
+        ├── 06_1d_modeling.md
+        ├── 07_2d_modeling.md
+        ├── 08_ras_mapper.md
+        ├── 09_case_study_rajkot.md
+        ├── 10_troubleshooting.md
+        ├── 11_pro_tips.md
+        ├── 12_integrations.md
+        ├── 13_github_practices.md
+        └── 14_conclusion.md
