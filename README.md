@@ -59,9 +59,9 @@ This repository hosts a world-class, 14-chapter modular training manual for [HEC
 ## 📂 Interactive Templates & Cheat Sheets
 We have built actual starter code and reference guides directly into this repository. Click below to view or download them:
 
-* 📝 **[Hydrology & Fluid Mechanics Master Cheat Sheet](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/cheat_sheets/hydro_equations_master.md)** - A complete mathematical reference guide for 16 core engineering equations, including their historical context and key limitations.
-* 🐍 **[Simple Hydrograph Plotter](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/simple_hydrograph.py)** - A beginner-friendly Python script using pandas and matplotlib to visualise synthetic streamflow data.
-* 📡 **[GloFAS River Data Fetcher](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/glofas_fetcher.py)** - An advanced Python script that connects to the Open-Meteo API to download and plot live, simulated discharge data for international rivers.
+* 📝 **[Hydrology & Fluid Mechanics Master Cheat Sheet](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/cheat_sheets/01_hydrology_formulas.md)** - A complete mathematical reference guide for 16 core engineering equations, including their historical context and key limitations.
+* 🐍 **[Simple Hydrograph Plotter](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/01_simple_hydrograph.py)** - A beginner-friendly Python script using pandas and matplotlib to visualise synthetic streamflow data.
+* 📡 **[GloFAS River Data Fetcher](https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/02_river_data_fetcher.py)** - An advanced Python script that connects to the Open-Meteo API to download and plot live, simulated discharge data for international rivers.
 
 ---
 
