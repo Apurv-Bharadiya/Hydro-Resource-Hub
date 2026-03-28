@@ -1,13 +1,13 @@
 # 📘 Chapter 1: Introduction to HEC-RAS & Industry Applications
 
-> 💡 **Pro Tip:** Before building a model, you must understand the tool's limitations and strengths. HEC-RAS is incredibly powerful for open-channel flow, but applying it to the wrong type of problem (like highly pressurized closed-pipe networks) will yield scientifically invalid results.
+> 💡 **Pro Tip:** Before building a model, you must understand the tool's limitations and strengths. HEC-RAS is incredibly powerful for open-channel flow, but applying it to the wrong type of problem (like highly pressurised closed-pipe networks) will yield scientifically invalid results.
 
 ---
 
 ## What is HEC-RAS?
 The Hydrologic Engineering Centre's River Analysis System ([HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/)) is a highly sophisticated, open-source hydraulic modelling software developed by the United States Army Corps of Engineers (USACE). 
 
-It allows civil engineers and hydrologists to simulate one-dimensional (1D) steady flow, 1D and 2D unsteady flow calculations, sediment transport/mobile bed computations, and water temperature/quality modeling.
+It allows civil engineers and hydrologists to simulate one-dimensional (1D) steady flow, 1D and 2D unsteady flow calculations, sediment transport/mobile bed computations, and water temperature/quality modelling.
 
 ## Applications in Real-World Engineering
 Whether you are conducting research for an M.E. thesis in Water Resources Engineering or working as a lead hydrologist at a consulting firm, HEC-RAS is used to solve high-stakes infrastructure challenges:
@@ -33,4 +33,9 @@ Whether you are conducting research for an M.E. thesis in Water Resources Engine
 
 <br>
 
-⬅️ **Previous:** [Master Index](./00_index.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 2: Installation & Setup](./02_installation_setup.md)
+---
+
+<div align="center">
+  🏠 <a href="./00_index.md"><b>Master Index</b></a> | 
+  <a href="./02_installation_setup.md"><b>Chapter 02: Setup ➡️</b></a>
+</div>
