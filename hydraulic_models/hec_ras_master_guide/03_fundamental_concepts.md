@@ -65,4 +65,9 @@ Manning's $n$ is the primary parameter you will adjust during model **calibratio
 
 <br>
 
-⬅️ **Previous:** [Chapter 2: Installation & Setup](./02_installation_setup.md) | 🏠 **[Back to Master Index](./00_index.md)** | ➡️ **Next:** [Chapter 4: Data Requirements](./04_data_requirements.md)
+---
+<div align="center">
+  <a href="./02_installation_setup.md"><b>⬅️ Chapter 02: Installation & Setup</b></a> | 
+  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
+  <a href="./04_data_requirements.md"><b>Chapter 04: Data Requirements ➡️</b></a>
+</div>
