@@ -48,8 +48,4 @@ Do not rely on outdated local hard drives for your base data. Connect directly t
 <br>
 
 ---
-<div align="center">
-  <a href="./11_pro_tips.md"><b>⬅️ Chapter 11: Pro Tips & Expert Workflows</b></a> | 
-  🏠 <a href="./00_index.md"><b>Main Index</b></a> | 
-  <a href="./13_github_practices.md"><b>Chapter 13: GitHub Best Practices ➡️</b></a>
-</div>
+**[⬅️ Chapter 11: Pro Tips & Expert Workflows](./11_pro_tips.md)** | **[🏠 Main Index](./00_index.md)** | **[Chapter 13: GitHub Best Practices ➡️](./13_github_practices.md)**
