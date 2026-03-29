@@ -1,0 +1,1457 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive compilation of open-source software and tools for Water Resources Engineering.">
+      
+      
+        <meta name="author" content="Apurv Bharadiya">
+      
+      
+      
+        <link rel="prev" href="../06_1d_modeling/">
+      
+      
+        <link rel="next" href="../08_ras_mapper/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 07: 2D Modelling - Hydro-Resource-Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-7-the-advanced-2d-modeling-workflow-rain-on-grid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-header__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydro-Resource-Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 07: 2D Modelling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00_index/" class="md-tabs__link">
+          
+  
+  
+  🌊 HEC-RAS Master Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-tabs__link">
+          
+  
+  
+  📂 Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-nav__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydro-Resource-Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 HEC-RAS Master Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌊 HEC-RAS Master Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_installation_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02: Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_fundamental_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03: Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_data_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04: Data Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_interface_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_1d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06: 1D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-the-physics-of-2d-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Physics of 2D Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-2d-flow-area-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 2D Flow Area Creation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. 2D Flow Area Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-drawing-the-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Drawing the Polygon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mesh-generation-sub-grid-bathymetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Mesh Generation &amp; Sub-Grid Bathymetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-the-secret-to-2d-breaklines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. The Secret to 2D: Breaklines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. The Secret to 2D: Breaklines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-automated-grids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem with Automated Grids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-breakline-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Breakline Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-urban-flood-modelling-rain-on-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Urban Flood Modelling (Rain-on-Grid)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Urban Flood Modelling (Rain-on-Grid)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-direct-precipitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Direct Precipitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-infiltration-where-does-the-water-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Infiltration (Where does the water go?)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-computational-stability-the-courant-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Computational Stability: The Courant Condition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. Computational Stability: The Courant Condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-balance-the-courant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to balance the Courant Number:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ultimate-2d-troubleshooting-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 The Ultimate 2D Troubleshooting Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_ras_mapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08: RAS Mapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_case_study_rajkot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09: Case Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10: Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_pro_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: Pro Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12: Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_github_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14: Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📂 Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📂 Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-the-physics-of-2d-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Physics of 2D Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-2d-flow-area-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. 2D Flow Area Creation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. 2D Flow Area Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-drawing-the-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Drawing the Polygon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mesh-generation-sub-grid-bathymetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Mesh Generation &amp; Sub-Grid Bathymetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-the-secret-to-2d-breaklines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. The Secret to 2D: Breaklines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. The Secret to 2D: Breaklines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-automated-grids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem with Automated Grids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-breakline-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Breakline Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-urban-flood-modelling-rain-on-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Urban Flood Modelling (Rain-on-Grid)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Urban Flood Modelling (Rain-on-Grid)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-direct-precipitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Direct Precipitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-infiltration-where-does-the-water-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Infiltration (Where does the water go?)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-computational-stability-the-courant-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Computational Stability: The Courant Condition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. Computational Stability: The Courant Condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-balance-the-courant-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to balance the Courant Number:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ultimate-2d-troubleshooting-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 The Ultimate 2D Troubleshooting Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-7-the-advanced-2d-modeling-workflow-rain-on-grid">🌊 Chapter 7: The Advanced 2D Modeling Workflow (Rain-on-Grid)</h1>
+<blockquote>
+<p>💡 <strong>Pro Tip:</strong> Moving from 1D to 2D modeling requires a complete paradigm shift. In 1D, you force water down a predefined pipe (your cross-sections). In 2D, you drop water onto a topographical grid and let the physics engine (gravity, friction, and terrain) decide where it flows. It is essential for urban stormwater routing, complex floodplains, and dam breaches.</p>
+</blockquote>
+<p>This chapter details the absolute cutting-edge of <a href="https://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a> capabilities: Two-Dimensional Hydrodynamics. </p>
+<hr />
+<h2 id="a-the-physics-of-2d-flow">A. The Physics of 2D Flow</h2>
+<p>Before drawing polygons, you must understand how HEC-RAS solves 2D flow. HEC-RAS offers two different mathematical equation sets for 2D modelling:</p>
+<ol>
+<li><strong>Diffusion Wave Equations (Default):</strong> Calculates flow driven primarily by gravity and friction. It is mathematically stable, computes very fast, and is highly accurate for standard floodplain inundation where water rises slowly.</li>
+<li><strong>Full 2D Saint-Venant (Shallow Water) Equations:</strong> Accounts for turbulence, eddy currents, and the Coriolis effect. <ul>
+<li><em>Why use it?</em> You MUST switch to the Full Momentum equations if you are modelling a sudden dam break, water hitting a bridge pier at high velocities, or tidal forces. It takes significantly longer to compute but captures complex hydrodynamics.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="b-2d-flow-area-creation">B. 2D Flow Area Creation</h2>
+<p>Unlike 1D where you draw a single river line, 2D requires a bounding box.</p>
+<h3 id="1-drawing-the-polygon">1. Drawing the Polygon</h3>
+<ul>
+<li><strong>How:</strong> Open <strong>RAS Mapper</strong>, right-click <code>Geometries &gt; 2D Flow Areas</code>, and select <code>Add a New 2D Flow Area</code>. Draw a polygon encompassing your entire study area.</li>
+<li><strong>Engineering Rule:</strong> Do not draw your 2D area right on the edge of your flood zone. Give the model a "buffer" so the boundary conditions do not artificially force the water behaviour.</li>
+</ul>
+<h3 id="2-mesh-generation-sub-grid-bathymetry">2. Mesh Generation &amp; Sub-Grid Bathymetry</h3>
+<p>Once the polygon is drawn, you must generate the computational mesh (the grid).
+* <strong>Cell Size ($\Delta x$):</strong> You specify a nominal cell size (e.g., $15\text{m} \times 15\text{m}$). The software generates thousands of computation points.
+* <strong>The HEC-RAS Superpower (Sub-Grid Bathymetry):</strong> Unlike other 2D software that averages the elevation of a $15\text{m}$ cell into one flat block, HEC-RAS retains the high-resolution geometry of the underlying DEM from <a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a> or <a href="https://bhuvan.nrsc.gov.in/">Bhuvan ISRO</a>. 
+* <em>Why it matters:</em> Even if you use a massive $50\text{m}$ cell, HEC-RAS still calculates the exact volume of a small $2\text{m}$ wide drainage ditch running through that cell. This allows you to use larger cells (faster computation) without losing volumetric accuracy.</p>
+<hr />
+<h2 id="c-the-secret-to-2d-breaklines">C. The Secret to 2D: Breaklines</h2>
+<p>If there is one concept to master in 2D modelling, it is <strong>Breaklines</strong>. </p>
+<h3 id="the-problem-with-automated-grids">The Problem with Automated Grids</h3>
+<p>Imagine a $20\text{m}$ wide grid cell generated directly on top of a narrow, $5\text{m}$ wide elevated highway. The cell face spans across the highway, connecting the low ground on either side. Mathematically, water will flow right through the cell face, effectively "leaking" through the solid highway embankment.</p>
+<h3 id="the-breakline-solution">The Breakline Solution</h3>
+<ul>
+<li><strong>How:</strong> In RAS Mapper, draw manual Breaklines along the ridges of roads, levees, and riverbanks. </li>
+<li><strong>Why:</strong> When you enforce a breakline, HEC-RAS physically snaps the edges of the computational cells directly to the line you drew. This ensures that a cell face perfectly aligns with the top of the levee, forcing water to overtop the actual elevation of the road rather than leaking through the grid.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Common Mistake:</strong> Failing to draw breaklines along major infrastructure will completely invalidate an urban flood model. Water will spread everywhere it shouldn't.</p>
+</blockquote>
+<hr />
+<h2 id="d-urban-flood-modelling-rain-on-grid">D. Urban Flood Modelling (Rain-on-Grid)</h2>
+<p>Traditional river models push water in from the upstream edge. But what happens in a city where the storm drains overflow before the water even reaches the river?</p>
+<h3 id="1-direct-precipitation">1. Direct Precipitation</h3>
+<p>Instead of an upstream hydrograph, you apply rainfall directly onto the 2D mesh.
+* <strong>How:</strong> In the <strong>Unsteady Flow Data</strong> editor, select <code>Add a Meteorological Data component</code>. You can input a Precipitation Hyetograph (e.g., $150\text{mm}$ of rain over 24 hours).
+* <strong>The Result:</strong> HEC-RAS will literally "rain" onto every single cell in your 2D mesh. The water will pool in low-lying intersections and naturally route itself down the streets based entirely on the topography.</p>
+<h3 id="2-infiltration-where-does-the-water-go">2. Infiltration (Where does the water go?)</h3>
+<p>If you rain $150\text{mm}$ onto a concrete city, most of it runs off. If you rain it onto a forest, the soil absorbs it. 
+* <strong>How:</strong> You must attach Land Use / Land Cover (LULC) data (prepared in <a href="https://qgis.org/">QGIS</a>) to your 2D mesh, and apply a Deficit and Constant infiltration method. This tells HEC-RAS to subtract water from the grid where the soil is permeable.</p>
+<hr />
+<h2 id="e-computational-stability-the-courant-condition">E. Computational Stability: The Courant Condition</h2>
+<p>2D Unsteady models are highly prone to mathematical explosions. If you run a model and the water violently sloshes back and forth at $50\text{m/s}$, your matrix has failed.</p>
+<p>To keep a 2D model stable, your Computational Time Step ($\Delta t$) and your Cell Size ($\Delta x$) must satisfy the <strong>Courant Condition</strong>:</p>
+<p>$$C = \frac{V \Delta t}{\Delta x} \le 1.0$$</p>
+<p><em>(Where $V$ is the expected flood wave velocity in m/s).</em></p>
+<h3 id="how-to-balance-the-courant-number">How to balance the Courant Number:</h3>
+<ol>
+<li><strong>Estimate Velocity:</strong> If water is moving at $2\text{m/s}$.</li>
+<li><strong>Check Cell Size:</strong> If your grid cells are $10\text{m}$ wide.</li>
+<li><strong>Calculate Time Step:</strong> $2 \times \Delta t / 10 = 1.0$. Your maximum allowable time step is <strong>5 seconds</strong>. </li>
+<li><em>If you attempt to run this model at a 1-minute time step, it will instantly crash because the water tries to travel across 12 cells in a single computation.</em></li>
+</ol>
+<h3 id="the-ultimate-2d-troubleshooting-rule">🚨 The Ultimate 2D Troubleshooting Rule</h3>
+<p>If your 2D model crashes with a "Matrix will not converge" error, <strong>cut your computation time step in half</strong> and run it again.</p>
+<p><br></p>
+<hr />
+<p><strong><a href="../06_1d_modeling/">⬅️ Chapter 06: 1D Modelling Workflow</a></strong> | <strong><a href="../00_index/">🏠 Main Index</a></strong> | <strong><a href="../08_ras_mapper/">Chapter 08: RAS Mapper &amp; Visualisation ➡️</a></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1472 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive compilation of open-source software and tools for Water Resources Engineering.">
+      
+      
+        <meta name="author" content="Apurv Bharadiya">
+      
+      
+      
+        <link rel="prev" href="../12_integrations/">
+      
+      
+        <link rel="next" href="../14_conclusion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 13: GitHub - Hydro-Resource-Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-13-github-best-practices-for-hydraulic-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-header__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydro-Resource-Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 13: GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00_index/" class="md-tabs__link">
+          
+  
+  
+  🌊 HEC-RAS Master Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-tabs__link">
+          
+  
+  
+  📂 Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-nav__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydro-Resource-Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 HEC-RAS Master Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌊 HEC-RAS Master Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_installation_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02: Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_fundamental_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03: Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_data_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04: Data Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_interface_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_1d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06: 1D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_2d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_ras_mapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08: RAS Mapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_case_study_rajkot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09: Case Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10: Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_pro_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: Pro Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12: Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-the-anatomy-of-hec-ras-files-what-to-keep-vs-toss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Anatomy of HEC-RAS Files (What to Keep vs. Toss)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. The Anatomy of HEC-RAS Files (What to Keep vs. Toss)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#files-you-must-upload-the-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Files You MUST Upload (The Blueprint)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-you-must-exclude-the-bloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Files You MUST EXCLUDE (The Bloat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-the-hec-ras-gitignore-masterclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. The HEC-RAS .gitignore Masterclass
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-handling-massive-geospatial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Handling Massive Geospatial Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Handling Massive Geospatial Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-git-large-file-storage-lfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Git Large File Storage (LFS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-cloud-data-hosting-the-scientific-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Cloud Data Hosting (The Scientific Standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-structuring-a-professional-hydraulic-repository-the-60-second-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Structuring a Professional Hydraulic Repository (The 60-Second Rule)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-the-reproducible-model-readme-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. The "Reproducible Model" README Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. The &#34;Reproducible Model&#34; README Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adding-visual-proof-gifs-and-pngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Adding Visual Proof (GIFs and PNGs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-physical-parameters-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Physical Parameters &amp; Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-how-to-run-the-model-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How to Run the Model (Step-by-Step)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14: Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📂 Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📂 Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-the-anatomy-of-hec-ras-files-what-to-keep-vs-toss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Anatomy of HEC-RAS Files (What to Keep vs. Toss)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. The Anatomy of HEC-RAS Files (What to Keep vs. Toss)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#files-you-must-upload-the-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Files You MUST Upload (The Blueprint)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-you-must-exclude-the-bloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Files You MUST EXCLUDE (The Bloat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-the-hec-ras-gitignore-masterclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. The HEC-RAS .gitignore Masterclass
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-handling-massive-geospatial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Handling Massive Geospatial Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Handling Massive Geospatial Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-git-large-file-storage-lfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Git Large File Storage (LFS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-cloud-data-hosting-the-scientific-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: Cloud Data Hosting (The Scientific Standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-structuring-a-professional-hydraulic-repository-the-60-second-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Structuring a Professional Hydraulic Repository (The 60-Second Rule)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-the-reproducible-model-readme-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. The "Reproducible Model" README Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. The &#34;Reproducible Model&#34; README Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adding-visual-proof-gifs-and-pngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Adding Visual Proof (GIFs and PNGs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-physical-parameters-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Physical Parameters &amp; Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-how-to-run-the-model-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. How to Run the Model (Step-by-Step)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-13-github-best-practices-for-hydraulic-models">🐙 Chapter 13: GitHub Best Practices for Hydraulic Models</h1>
+<blockquote>
+<p>💡 <strong>Pro Tip:</strong> <a href="https://github.com/">GitHub</a> was built for software engineers writing lightweight lines of text. It was <em>not</em> built for Water Resources Engineers generating 50-Gigabyte binary flood simulation results. If you attempt to drag-and-drop a raw <a href="https://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a> project folder directly into a repository, it will immediately reject your upload, crash your commit, and lock your repository.</p>
+</blockquote>
+<p>To build a professional, open-source engineering portfolio, you must master the art of version control for computational fluid dynamics. This chapter teaches you how to decouple your lightweight mathematical "inputs" from your massive computational "outputs."</p>
+<hr />
+<h2 id="a-the-anatomy-of-hec-ras-files-what-to-keep-vs-toss">A. The Anatomy of HEC-RAS Files (What to Keep vs. Toss)</h2>
+<p>GitHub has a strict file size limit of <strong>100 MB per file</strong>. A typical 2D HEC-RAS Unsteady Flow result file (<code>.p01.hdf</code>) for an urban grid easily exceeds 5 GB. You absolutely cannot push result files to GitHub. </p>
+<p>You must only push the "Blueprint" (the inputs). This allows other engineers to download your repository and click "Compute" on their own machines to regenerate the heavy results locally.</p>
+<h3 id="files-you-must-upload-the-blueprint">🟢 Files You MUST Upload (The Blueprint)</h3>
+<p>These are lightweight text and XML files that define the physics and geometry of your model.
+* <strong><code>.prj</code> (Project File):</strong> The master directory file.
+* <strong><code>.g01</code>, <code>.g02</code> (Geometry Files):</strong> Contains your 1D cross-section coordinates, 2D mesh boundary coordinates, and Manning's $n$ values.
+* <strong><code>.f01</code>, <code>.u01</code> (Flow Files):</strong> Contains your steady discharges or unsteady time-series hydrographs.
+* <strong><code>.p01</code>, <code>.p02</code> (Plan Files):</strong> Contains your computational time-step settings and matrix tolerances.
+* <strong><code>.b01</code> (Boundary Conditions):</strong> Tied directly to unsteady flow data.</p>
+<h3 id="files-you-must-exclude-the-bloat">🔴 Files You MUST EXCLUDE (The Bloat)</h3>
+<ul>
+<li><strong><code>*.p01.hdf</code> (Plan HDF):</strong> The massive binary results file containing every velocity and depth calculation. </li>
+<li><strong><code>*.g01.hdf</code> (Geometry HDF):</strong> The processed 2D mesh properties. (Users can easily regenerate this on their own machine by opening RAS Mapper and hitting save).</li>
+<li><strong><code>.comp</code> &amp; <code>.log</code> (Computation Logs):</strong> Temporary text files generated during an active run.</li>
+<li><strong>Raw <code>.tif</code> DEMs &gt; 100MB:</strong> If your terrain is massive, do not push it directly to the repository.</li>
+</ul>
+<hr />
+<h2 id="b-the-hec-ras-gitignore-masterclass">B. The HEC-RAS <code>.gitignore</code> Masterclass</h2>
+<p>The only professional way to prevent accidental uploads of massive files is to use a <code>.gitignore</code> file. </p>
+<p><strong>Step-by-Step Implementation:</strong>
+1. Create a new file named exactly <code>.gitignore</code> in the root (main) directory of your repository.
+2. Paste the following HEC-RAS specific exclusions into it:</p>
+<pre><code class="language-text"># Ignore HEC-RAS Temporary &amp; Computation Files
+*.comp
+*.log
+*.bco
+*.b01.bak
+*.g01.bak
+
+# Ignore HEC-RAS Massive Binary HDF Files
+# (This prevents 50GB results from crashing your GitHub upload)
+*.hdf
+
+# Ignore specific heavy result and geometry caching files
+*.p*.hdf
+*.g*.hdf
+*.x*.hdf
+
+# Ignore GIS heavy raster files (Host these externally)
+*.tif
+*.flt
+*.vrt
+</code></pre>
+<hr />
+<h2 id="c-handling-massive-geospatial-data">C. Handling Massive Geospatial Data</h2>
+<p>If your Digital Elevation Model (DEM) from <a href="https://earthexplorer.usgs.gov/">USGS Earth Explorer</a> or <a href="https://bhuvan.nrsc.gov.in/">Bhuvan ISRO</a> is 500 MB, you have two professional options for sharing it:</p>
+<h3 id="option-1-git-large-file-storage-lfs">Option 1: Git Large File Storage (LFS)</h3>
+<p><a href="https://git-lfs.com/">Git LFS</a> is an official extension for GitHub that replaces large files with tiny text pointers inside your repository, while storing the actual massive file contents on a remote server. 
+* <em>Why use it:</em> Best if you want the user to be able to clone the <code>.tif</code> directly with the repository command without leaving GitHub.</p>
+<h3 id="option-2-cloud-data-hosting-the-scientific-standard">Option 2: Cloud Data Hosting (The Scientific Standard)</h3>
+<p>Do not treat GitHub as a cloud hard drive. Host your massive terrain and LULC datasets on dedicated scientific data repositories like <a href="https://zenodo.org/">Zenodo</a> (which grants your dataset a citable DOI for research papers) or <a href="https://www.kaggle.com/">Kaggle</a>. 
+* <em>The Workflow:</em> Upload your 500MB DEM to Zenodo. In your GitHub <code>README.md</code>, provide a direct download link: <em>"Please download the required Bare-Earth DEM from this Zenodo link and place it in the <code>/gis_data/</code> folder before opening the HEC-RAS project."</em></p>
+<hr />
+<h2 id="d-structuring-a-professional-hydraulic-repository-the-60-second-rule">D. Structuring a Professional Hydraulic Repository (The 60-Second Rule)</h2>
+<p>An open-source hydraulic model should be organised so that a visiting engineer, an academic advisor, or a regulatory reviewer can understand your exact data pipeline in under 60 seconds. </p>
+<p>Never dump all your files into a single root folder. HEC-RAS is notoriously messy and generates dozens of temporary files during a run. You must strictly isolate your raw geospatial data from your computational sandbox. </p>
+<p>Adopt this exact folder hierarchy for all professional modelling repositories:</p>
+<pre><code class="language-text">Aji-River-Flood-Model/
+├── .gitignore                 &lt;-- Your exclusion rules (Mandatory)
+├── README.md                  &lt;-- The Executive Summary &amp; visual maps
+├── /docs/                     &lt;-- Technical reports, damage assessments (PDFs)
+├── /gis_data/                 
+│   ├── /terrain/              &lt;-- Clipped DEMs (Hosted via Git LFS or Zenodo)
+│   └── /land_cover/           &lt;-- Shapefiles processed in QGIS
+├── /hydrology_inputs/         &lt;-- HEC-HMS outputs, CWC gauge data (.csv or .dss)
+├── /hec_ras_model/            &lt;-- ONLY the lightweight .prj, .g01, .p01 files
+└── /results_visuals/          &lt;-- Exported flood maps (.png, .gif) for the README
+</code></pre>
+<hr />
+<h2 id="e-the-reproducible-model-readme-documentation">E. The "Reproducible Model" README Documentation</h2>
+<p>Your repository's <code>README.md</code> is the front page of your engineering portfolio. A professional hydraulic README must prove the validity of your work instantly.</p>
+<h3 id="1-the-executive-summary">1. The Executive Summary</h3>
+<p>What river is this? What is the flood event? (e.g., "1D/2D Coupled Simulation of the 100-Year Return Period Flood on the Aji River, Rajkot.")</p>
+<h3 id="2-adding-visual-proof-gifs-and-pngs">2. Adding Visual Proof (GIFs and PNGs)</h3>
+<p>No one wants to download a model if they do not know what it looks like. 
+* <strong>Action:</strong> Export a static PNG of your Maximum Depth map from RAS Mapper, or use screen-recording software to create a 5-second <code>.gif</code> of the flood wave routing through the city.
+* <strong>Markdown Implementation:</strong> Embed it directly into your README using: <code>![Aji River Flood Wave](./results_visuals/flood_animation.gif)</code></p>
+<h3 id="3-physical-parameters-assumptions">3. Physical Parameters &amp; Assumptions</h3>
+<p>State the mesh resolution (e.g., $15\text{m} \times 15\text{m}$), the governing equations used (Diffusion Wave vs. Full Momentum), the Manning's $n$ values, and the computation time step ($\Delta t$).</p>
+<h3 id="4-how-to-run-the-model-step-by-step">4. How to Run the Model (Step-by-Step)</h3>
+<p>Provide explicit, idiot-proof instructions for the user. 
+* <em>Example:</em> 1. Clone this repository to your local <code>C:\</code> drive (avoid long paths). 
+  2. Download the external DEM from Zenodo and place it in <code>/gis_data/</code>.
+  3. Open <code>Aji_River_Model.prj</code> in HEC-RAS v6.3.1. 
+  4. Open RAS Mapper to ensure the terrain path is successfully connected. 
+  5. Select Flow Plan 01 and hit Compute.</p>
+<p><br></p>
+<hr />
+<p><strong><a href="../12_integrations/">⬅️ Chapter 12: Software Integrations</a></strong> | <strong><a href="../00_index/">🏠 Main Index</a></strong> | <strong><a href="../14_conclusion/">Chapter 14: Conclusion ➡️</a></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

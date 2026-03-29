@@ -1,0 +1,1950 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive compilation of open-source software and tools for Water Resources Engineering.">
+      
+      
+        <meta name="author" content="Apurv Bharadiya">
+      
+      
+      
+      
+        <link rel="next" href="hydraulic_models/hec_ras_master_guide/00_index/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hydro-Resource-Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#featured-the-ultimate-hec-ras-master-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Hydro-Resource-Hub" class="md-header__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydro-Resource-Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🏠 Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="hydraulic_models/hec_ras_master_guide/00_index/" class="md-tabs__link">
+          
+  
+  
+  🌊 HEC-RAS Master Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="cheat_sheets/01_hydrology_formulas/" class="md-tabs__link">
+          
+  
+  
+  📂 Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Hydro-Resource-Hub" class="md-nav__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydro-Resource-Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#featured-the-ultimate-hec-ras-master-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Featured: The Ultimate HEC-RAS Master Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Featured: The Ultimate HEC-RAS Master Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Guide Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-templates-cheat-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Interactive Templates &amp; Cheat Sheets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gis-spatial-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ GIS &amp; Spatial Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hydrological-hydraulic-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Hydrological &amp; Hydraulic Modelling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-quality-environmental-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Water Quality &amp; Environmental Modelling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-support-systems-dss-water-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚖️ Decision Support Systems (DSS) &amp; Water Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-datasets-remote-sensing-climate-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ Public Datasets, Remote Sensing &amp; Climate Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-calibration-uncertainty-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Model Calibration &amp; Uncertainty Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-libraries-for-water-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐍 Python Libraries for Water Engineers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r-packages-for-statistical-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 R Packages for Statistical Hydrology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emerging-tech-ai-machine-learning-in-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Emerging Tech: AI &amp; Machine Learning in Hydrology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-tools-cloud-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ Web Tools &amp; Cloud Platforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-educational-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Open Educational Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Master Reference Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 HEC-RAS Master Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌊 HEC-RAS Master Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/00_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/02_installation_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02: Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/03_fundamental_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03: Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/04_data_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04: Data Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/05_interface_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/06_1d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06: 1D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/07_2d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/08_ras_mapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08: RAS Mapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/09_case_study_rajkot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09: Case Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/10_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10: Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/11_pro_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: Pro Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/12_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12: Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/13_github_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraulic_models/hec_ras_master_guide/14_conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14: Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📂 Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📂 Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cheat_sheets/01_hydrology_formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#featured-the-ultimate-hec-ras-master-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Featured: The Ultimate HEC-RAS Master Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Featured: The Ultimate HEC-RAS Master Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guide-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Guide Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-templates-cheat-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Interactive Templates &amp; Cheat Sheets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gis-spatial-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ GIS &amp; Spatial Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hydrological-hydraulic-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Hydrological &amp; Hydraulic Modelling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-quality-environmental-modelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Water Quality &amp; Environmental Modelling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-support-systems-dss-water-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚖️ Decision Support Systems (DSS) &amp; Water Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-datasets-remote-sensing-climate-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛰️ Public Datasets, Remote Sensing &amp; Climate Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-calibration-uncertainty-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Model Calibration &amp; Uncertainty Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-libraries-for-water-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐍 Python Libraries for Water Engineers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r-packages-for-statistical-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 R Packages for Statistical Hydrology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emerging-tech-ai-machine-learning-in-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Emerging Tech: AI &amp; Machine Learning in Hydrology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-tools-cloud-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ Web Tools &amp; Cloud Platforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-educational-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Open Educational Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-reference-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Master Reference Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div align="center">
+  <h1>🌊 Hydro-Resource-Hub</h1>
+
+  <img src="https://img.shields.io/badge/Domain-Water%20Resources%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff" alt="Domain">
+  <img src="https://img.shields.io/badge/Ecosystem-Open%20Source-10B981?style=flat-square&logo=github&logoColor=white&labelColor=047857" alt="Ecosystem">
+  <img src="https://img.shields.io/badge/Scale-Planetary%20Data-8B5CF6?style=flat-square&logo=googleearth&logoColor=white&labelColor=5B21B6" alt="Scale">
+  <a href="https://doi.org/10.5281/zenodo.19315067"><img src="https://zenodo.org/badge/1192705522.svg" alt="DOI"></a>
+</div>
+
+<div align="center">
+<br>
+
+  <i> "A comprehensive compilation of open-source software, public datasets, and computational tools for Water Resources Engineering and hydrological modelling." </i>
+</div>
+
+<blockquote>
+<p>🌍 <strong>Welcome to the Hub.</strong> Engineered for graduate researchers, data scientists, and civil engineers, this repository serves as a centralised command centre for modern water management. Explore industry-standard software, harness planetary-scale satellite datasets, and deploy machine learning models to solve complex hydrological challenges.</p>
+</blockquote>
+<hr />
+<h2 id="featured-the-ultimate-hec-ras-master-guide">🚀 Featured: The Ultimate HEC-RAS Master Guide</h2>
+<div>
+  <img src="https://img.shields.io/badge/Level-Beginner%20to%20Advanced-2EA043?style=flat-square&logo=gitbook&logoColor=white&labelColor=238636" alt="Level">
+  <img src="https://img.shields.io/badge/Estimated%20Time-45%20Minutes-007EC6?style=flat-square&logo=clockify&logoColor=white&labelColor=005A9E" alt="Estimated Time">
+  <img src="https://img.shields.io/badge/Domain-Hydraulic%20Engineering-F59E0B?style=flat-square&logo=digitalocean&logoColor=white&labelColor=B45309" alt="Domain">
+</div>
+
+<p><br></p>
+<p>This repository hosts a world-class, 14-chapter modular training manual for <a href="https://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a>. It transitions from basic 1D steady-flow physics to advanced 2D "Rain-on-Grid" urban hydrodynamic simulations.</p>
+<h3 id="guide-roadmap">📑 Guide Roadmap</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Section</strong></th>
+<th style="text-align: left;"><strong>Chapters</strong></th>
+<th style="text-align: left;"><strong>Highlights</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>🟢 Foundations</strong></td>
+<td style="text-align: left;"><a href="hydraulic_models/hec_ras_master_guide/01_introduction/">01</a> - <a href="hydraulic_models/hec_ras_master_guide/04_data_requirements/">04</a></td>
+<td style="text-align: left;">Theory, Installation, and USGS / Bhuvan Data Sourcing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>🟡 Core Workflows</strong></td>
+<td style="text-align: left;"><a href="hydraulic_models/hec_ras_master_guide/05_interface_overview/">05</a> - <a href="hydraulic_models/hec_ras_master_guide/08_ras_mapper/">08</a></td>
+<td style="text-align: left;">1D/2D Mesh Generation, Breaklines, and RAS Mapper Visualisation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>🔴 Advanced Apps</strong></td>
+<td style="text-align: left;"><a href="hydraulic_models/hec_ras_master_guide/09_case_study_rajkot/">09</a> - <a href="hydraulic_models/hec_ras_master_guide/12_integrations/">12</a></td>
+<td style="text-align: left;">Rajkot Urban Case Study, Troubleshooting, and HEC-HMS Integration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>🐙 Management</strong></td>
+<td style="text-align: left;"><a href="hydraulic_models/hec_ras_master_guide/13_github_practices/">13</a> - <a href="hydraulic_models/hec_ras_master_guide/14_conclusion/">14</a></td>
+<td style="text-align: left;">GitHub Best Practices for heavy models and Career Next Steps.</td>
+</tr>
+</tbody>
+</table>
+<p>👉 <strong><a href="hydraulic_models/hec_ras_master_guide/00_index/">Start the Master Guide here: Chapter 0 - Main Index</a></strong></p>
+<hr />
+<h2 id="table-of-contents">📑 Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#-interactive-templates--cheat-sheets">📂 Interactive Templates &amp; Cheat Sheets</a></p>
+</li>
+<li>
+<p><a href="#️-gis--spatial-analysis">🗺️ GIS &amp; Spatial Analysis</a></p>
+</li>
+<li><a href="#-hydrological--hydraulic-modelling">🌊 Hydrological &amp; Hydraulic Modelling</a></li>
+<li><a href="#-water-quality--environmental-modelling">🧪 Water Quality &amp; Environmental Modelling</a></li>
+<li><a href="#️-decision-support-systems-dss--water-allocation">⚖️ Decision Support Systems (DSS) &amp; Water Allocation</a></li>
+<li><a href="#️-public-datasets-remote-sensing--climate-data">🛰️ Public Datasets, Remote Sensing &amp; Climate Data</a></li>
+<li><a href="#-model-calibration--uncertainty-analysis">🎯 Model Calibration &amp; Uncertainty Analysis</a></li>
+<li><a href="#-python-libraries-for-water-engineers">🐍 Python Libraries for Water Engineers</a></li>
+<li><a href="#-r-packages-for-statistical-hydrology">📈 R Packages for Statistical Hydrology</a></li>
+<li><a href="#-emerging-tech-ai--machine-learning-in-hydrology">🤖 Emerging Tech: AI &amp; Machine Learning in Hydrology</a></li>
+<li><a href="#️-web-tools--cloud-platforms">☁️ Web Tools &amp; Cloud Platforms</a></li>
+<li><a href="#-open-educational-resources">📚 Open Educational Resources</a></li>
+<li><a href="#-master-reference-table">📋 Master Reference Table</a></li>
+</ul>
+<hr />
+<h2 id="interactive-templates-cheat-sheets">📂 Interactive Templates &amp; Cheat Sheets</h2>
+<p>We have built actual starter code and reference guides directly into this repository. Click below to view or download them:
+* 📝 <strong><a href="cheat_sheets/01_hydrology_formulas/">Hydrology &amp; Fluid Mechanics Master Cheat Sheet</a></strong> - A complete mathematical reference guide for 16 core engineering equations, including their historical context and key limitations.
+* 🐍 <strong><a href="https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/01_simple_hydrograph.py">Simple Hydrograph Plotter</a></strong> - A beginner-friendly Python script using pandas and matplotlib to visualise synthetic streamflow data.
+* 📡 <strong><a href="https://github.com/Apurv-Bharadiya/Hydro-Resource-Hub/blob/main/python_templates/02_river_data_fetcher.py">GloFAS River Data Fetcher</a></strong> - An advanced Python script that connects to the Open-Meteo API to download and plot live, simulated discharge data for international rivers.</p>
+<hr />
+<h2 id="gis-spatial-analysis">🗺️ GIS &amp; Spatial Analysis</h2>
+<p>Every hydrological model begins with a spatial understanding of the terrain. Geographic Information Systems (GIS) are the bedrock of modern Water Resources Engineering, allowing researchers to delineate watersheds, process Digital Elevation Models (DEMs), and map flood inundation zones before any fluid mechanics equations are even applied.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://qgis.org/">QGIS</a></strong></td>
+<td style="text-align: left;">A professional-grade, open-source Geographic Information System (GIS). Essential for manipulating spatial data, mapping flood zones, and preparing digital elevation models (DEMs) before importing them into hydrological models.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.esri.com/en-us/arcgis/pro">ArcGIS</a></strong></td>
+<td style="text-align: left;">The industry-standard commercial GIS platform for advanced spatial analytics and mapping.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://earthengine.google.com/">Google Earth Engine (GEE)</a></strong></td>
+<td style="text-align: left;">A cloud-based geospatial processing platform that allows you to run algorithms on massive planetary-scale datasets (like Landsat and Sentinel) without downloading them.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://grass.osgeo.org/">GRASS GIS</a></strong></td>
+<td style="text-align: left;">A powerful GIS software suite used for geospatial data management and complex terrain analysis. It is particularly strong in raster processing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.whiteboxgeo.com/">WhiteboxTools</a></strong></td>
+<td style="text-align: left;">An advanced geospatial data analysis platform containing highly optimised tools for hydrological analysis, including watershed delineation, flow accumulation, and stream network extraction.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hydrological-hydraulic-modelling">🌊 Hydrological &amp; Hydraulic Modelling</h2>
+<p>This is the computational core of water engineering. Hydrological models simulate the rainfall-runoff process across a catchment, while hydraulic models route that water through rivers, pipes, and channels. Together, they allow us to design resilient infrastructure and forecast flood events under changing climate scenarios.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.epa.gov/water-research/storm-water-management-model-swmm">EPA SWMM</a></strong></td>
+<td style="text-align: left;">The Storm Water Management Model. A dynamic rainfall-runoff simulation model used for single-event or long-term simulation of runoff quantity and quality from primarily urban areas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a></strong></td>
+<td style="text-align: left;">Developed by the US Army Corps of Engineers, this River Analysis System allows you to perform one-dimensional steady flow, one and two-dimensional unsteady flow calculations, and sediment transport modelling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://swat.tamu.edu/">SWAT</a></strong></td>
+<td style="text-align: left;">The Soil and Water Assessment Tool. A basin-scale, continuous-time model used extensively in academic research to simulate the quality and quantity of surface and groundwater and predict the environmental impact of land use and agricultural practices.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.usgs.gov/software/modflow-6-usgs-modular-hydrologic-model">MODFLOW</a></strong></td>
+<td style="text-align: left;">The USGS's modular finite-difference flow model, which is the international standard for simulating and predicting groundwater conditions and groundwater/surface-water interactions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.mikepoweredbydhi.com/">MIKE by DHI</a></strong></td>
+<td style="text-align: left;">A comprehensive suite of commercial software for modelling water environments (urban, coastal, sea, and water resources).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.epa.gov/ceam/hydrological-simulation-program-fortran-hspf">HSPF</a></strong></td>
+<td style="text-align: left;">Hydrological Simulation Program - Fortran. Simulates the hydrologic and associated water quality processes on pervious and impervious land surfaces.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.aquanty.com/hydrogeosphere">HydroGeoSphere</a></strong></td>
+<td style="text-align: left;">A fully integrated 3D surface/subsurface flow and transport model.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="water-quality-environmental-modelling">🧪 Water Quality &amp; Environmental Modelling</h2>
+<p>Modern water management must address quality, not just quantity. These modelling tools simulate the transport and fate of pollutants, nutrients, and thermal changes in water bodies. They are critical for environmental impact assessments, protecting aquatic ecosystems, and ensuring safe municipal water supplies.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.epa.gov/water-research/epanet">EPANET</a></strong></td>
+<td style="text-align: left;">A widely used software application used to model the hydraulic and water quality behaviour of pressurised water distribution piping systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.epa.gov/caddis-vol4/qual2k">QUAL2K</a></strong></td>
+<td style="text-align: left;">A one-dimensional river and stream water quality model supported by the EPA.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.epa.gov/ceam/water-quality-analysis-simulation-program-wasp">WASP</a></strong></td>
+<td style="text-align: left;">The Water Quality Analysis Simulation Program by the EPA. Helps users interpret and predict water quality responses to natural phenomena and man-made pollution in rivers, lakes, and estuaries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.cee.pdx.edu/w2/">CE-QUAL-W2</a></strong></td>
+<td style="text-align: left;">A water quality and hydrodynamic model in 2D (longitudinal-vertical) for rivers, estuaries, lakes, reservoirs, and river basin systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://naturalcapitalproject.stanford.edu/software/invest">InVEST</a></strong></td>
+<td style="text-align: left;">A suite of free, open-source software models used to map and value the goods and services from nature, including water yield and nutrient retention.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="decision-support-systems-dss-water-allocation">⚖️ Decision Support Systems (DSS) &amp; Water Allocation</h2>
+<p>Engineering meets policy. When water becomes scarce, balancing the competing demands of agriculture, urban centres, and industry requires rigorous optimisation. Decision Support Systems provide a framework for scenario testing, helping stakeholders make data-driven allocation policies and manage reservoir operations.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.weap21.org/">WEAP</a></strong></td>
+<td style="text-align: left;">Water Evaluation And Planning system. A user-friendly tool that takes an integrated approach to water resources planning.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://aquatool.webs.upv.es/">AQUATOOL</a></strong></td>
+<td style="text-align: left;">A Decision Support System shell for the planning and management of complex water resources systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://hydrodss.org/">HYDRODSS</a></strong></td>
+<td style="text-align: left;">Tools and frameworks for building hydro-informatics and decision support systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://pywr.github.io/pywr-docs/">Pywr</a></strong></td>
+<td style="text-align: left;">A Python library for water resource system simulation and optimisation. Great for modelling how water should be distributed among agriculture, cities, and industry in a river basin.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="public-datasets-remote-sensing-climate-data">🛰️ Public Datasets, Remote Sensing &amp; Climate Data</h2>
+<p>A model is only as good as its input data. With physical stream gauges becoming sparse or unreliable in many regions, remote sensing and planetary-scale satellite data have become the lifeblood of hydrological research. These public datasets provide critical historical and real-time inputs for precipitation, evapotranspiration, and land-cover.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://power.larc.nasa.gov/">NASA POWER</a></strong></td>
+<td style="text-align: left;">Prediction of Worldwide Energy Resources. Provides freely available solar and meteorological data sets from NASA research.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://gpm.nasa.gov/">TRMM &amp; GPM</a></strong></td>
+<td style="text-align: left;">Tropical Rainfall Measuring Mission. Crucial for historical, satellite-based rainfall data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://modis.gsfc.nasa.gov/">MODIS</a></strong></td>
+<td style="text-align: left;">Moderate Resolution Imaging Spectroradiometer. Excellent for tracking the water cycle, snow cover, and evapotranspiration over time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://scihub.copernicus.eu/">Landsat &amp; Sentinel (Copernicus)</a></strong></td>
+<td style="text-align: left;">Primary satellite constellations for medium to high-resolution optical imagery, essential for land use and water body mapping.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://climate.copernicus.eu/climate-reanalysis">ERA5 (Copernicus)</a></strong></td>
+<td style="text-align: left;">The fifth generation ECMWF atmospheric reanalysis of the global climate. Essential for retrieving historical precipitation, temperature, and evaporation data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.chc.ucsb.edu/data/chirps">CHIRPS</a></strong></td>
+<td style="text-align: left;">Climate Hazards Group InfraRed Precipitation with Station data. A 35+ year quasi-global rainfall dataset.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.worldclim.org/">WorldClim</a></strong></td>
+<td style="text-align: left;">Global climate data for ecological modelling and GIS, providing high-resolution average monthly climate data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://waterdata.usgs.gov/nwis">USGS Water Data for the Nation</a></strong></td>
+<td style="text-align: left;">Provides access to water-resources data collected at approximately 1.9 million sites across the United States.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://indiawris.gov.in/wris/#/">India WRIS</a></strong></td>
+<td style="text-align: left;">The Water Resources Information System of India. A comprehensive portal providing regional data on rainfall, surface water, groundwater, and water quality.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://earthexplorer.usgs.gov/">EarthExplorer</a></strong></td>
+<td style="text-align: left;">The primary portal for downloading digital elevation models (DEMs), Landsat imagery, and other geospatial datasets necessary for watershed mapping.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="model-calibration-uncertainty-analysis">🎯 Model Calibration &amp; Uncertainty Analysis</h2>
+<p>Uncalibrated models are merely hypotheses. To transition a model from a theoretical exercise to a reliable predictive tool, it must be rigorously calibrated against observed historical data. These tools automate complex parameter estimation and quantify the inherent uncertainty in our hydrological predictions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://pesthomepage.org/">PEST</a></strong></td>
+<td style="text-align: left;">The industry standard for Model-Independent Parameter Estimation and Uncertainty Analysis. It automates the calibration of models like MODFLOW.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://swat.tamu.edu/software/swat-cup/">SWAT-CUP</a></strong></td>
+<td style="text-align: left;">A specialised software suite designed specifically for the calibration, validation, and uncertainty analysis of SWAT models.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="python-libraries-for-water-engineers">🐍 Python Libraries for Water Engineers</h2>
+<p>Python has radically transformed hydro-informatics. By shifting away from tedious point-and-click GUI workflows, engineers can use Python to automate spatial geoprocessing, rapidly clean massive climate datasets, and build reproducible, open-source modelling pipelines.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>geopandas</code></strong></td>
+<td style="text-align: left;">Extends the datatypes used by pandas to allow spatial operations on geometric types. It makes working with vector data (shapefiles) in Python incredibly straightforward.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>rasterio</code></strong></td>
+<td style="text-align: left;">A library for reading and writing geospatial raster data (like GeoTIFFs). It allows you to analyse elevation data or satellite imagery directly within a Python script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>HydroStats</code></strong></td>
+<td style="text-align: left;">A library specifically designed for computing error metrics (like Nash-Sutcliffe Efficiency or RMSE) to evaluate the accuracy of your hydrological models against observed data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>pyswmm</code></strong></td>
+<td style="text-align: left;">A Python wrapper for EPA SWMM. It allows you to programmatically interact with the SWMM engine, enabling you to change parameters dynamically during a simulation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="r-packages-for-statistical-hydrology">📈 R Packages for Statistical Hydrology</h2>
+<p>While Python dominates spatial automation, R remains deeply entrenched in academic hydrology for its unparalleled statistical capabilities. These packages are essential for rigorous frequency analysis, flow duration curves, and calculating goodness-of-fit metrics for model validation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>HydroGOF</code></strong></td>
+<td style="text-align: left;">An R package designed for Goodness-of-fit functions for comparison of simulated and observed hydrological time series (calculates NSE, RMSE, PBIAS, etc.).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>dataRetrieval</code></strong></td>
+<td style="text-align: left;">Created by the USGS, this package is designed to obtain USGS or EPA water quality and hydrology data directly into R for analysis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>fasstr</code></strong></td>
+<td style="text-align: left;">Flow Analysis Summary Statistics Tool for R. Functions to tidy, summarise, analyse, trend, and visualise streamflow data.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="emerging-tech-ai-machine-learning-in-hydrology">🤖 Emerging Tech: AI &amp; Machine Learning in Hydrology</h2>
+<p>The frontier of water resources engineering is increasingly data-driven. Machine Learning algorithms are beginning to augment, and in some cases outperform, traditional physics-based models—especially in rapid streamflow forecasting and gap-filling incomplete historical datasets.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.tensorflow.org/">TensorFlow</a> &amp; <a href="https://pytorch.org/">PyTorch</a></strong></td>
+<td style="text-align: left;">The premier deep learning frameworks. Highly useful for building Long Short-Term Memory (LSTM) networks for rainfall-runoff modelling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://scikit-learn.org/">scikit-learn</a></strong></td>
+<td style="text-align: left;">The standard Python library for traditional machine learning algorithms (Random Forests, SVMs) used in regional hydrology studies.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="web-tools-cloud-platforms">☁️ Web Tools &amp; Cloud Platforms</h2>
+<p>The era of desktop-bound modelling is ending. Cloud platforms allow engineers to bypass local hardware limitations, running massive parallel simulations and sharing dynamic, interactive dashboards directly with stakeholders and policymakers.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://hydroserver.org/">HydroServer</a></strong></td>
+<td style="text-align: left;">A suite of software applications for publishing and sharing hydrologic datasets on the web.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.mikepoweredbydhi.com/products/mike-cloud">DHI Cloud Platforms</a></strong></td>
+<td style="text-align: left;">Web-based platforms for running intensive hydraulic models and sharing results dynamically.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="open-educational-resources">📚 Open Educational Resources</h2>
+<p>Continuous learning is vital in an industry transformed by digital tech. These open-source platforms and consortiums democratize access to advanced hydrological science, ensuring that graduate researchers and practitioners have the training needed to tackle complex water challenges.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Resource</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.hydrolearn.org/">HydroLearn</a></strong></td>
+<td style="text-align: left;">An open-source platform for active learning modules in hydrology and water resources engineering.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><a href="https://www.cuahsi.org/">CUAHSI</a></strong></td>
+<td style="text-align: left;">Consortium of Universities for the Advancement of Hydrologic Science. Provides a wealth of data sets, educational materials, and cyberinfrastructure for water researchers.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="master-reference-table">📋 Master Reference Table</h2>
+<p><em>A quick-reference matrix of the critical tools, models, and datasets used in modern Water Resources Engineering.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><em>Name</em></th>
+<th style="text-align: left;"><em>Type</em></th>
+<th style="text-align: left;"><em>Publisher / Agency</em></th>
+<th style="text-align: left;"><em>Mission / Data Coverage</em></th>
+<th style="text-align: left;"><em>Primary Use (Why use it?)</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>QGIS</strong></td>
+<td style="text-align: left;">GIS Software</td>
+<td style="text-align: left;">Open Source</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Free, professional-grade mapping, DEM processing, and spatial data manipulation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Google Earth Engine</strong></td>
+<td style="text-align: left;">Cloud GIS</td>
+<td style="text-align: left;">Google</td>
+<td style="text-align: left;">Global</td>
+<td style="text-align: left;">Running geospatial algorithms on planetary-scale datasets without downloading them.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EPA SWMM</strong></td>
+<td style="text-align: left;">Hydrologic Model</td>
+<td style="text-align: left;">US EPA</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Industry standard for urban stormwater, rainfall-runoff, and sewer simulation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HEC-RAS</strong></td>
+<td style="text-align: left;">Hydraulic Model</td>
+<td style="text-align: left;">US Army Corps</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">1D/2D river flow routing, flood inundation mapping, and sediment transport.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SWAT</strong></td>
+<td style="text-align: left;">Basin Model</td>
+<td style="text-align: left;">USDA / Texas A&amp;M</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Long-term basin-scale agricultural, land-use, and environmental impact modelling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MODFLOW</strong></td>
+<td style="text-align: left;">Groundwater Model</td>
+<td style="text-align: left;">USGS</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">The definitive global standard for 3D groundwater flow and surface-water interaction.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EPANET</strong></td>
+<td style="text-align: left;">Pipe Network Model</td>
+<td style="text-align: left;">US EPA</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Simulating hydraulic and water quality behaviour in pressurised distribution pipes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>WEAP</strong></td>
+<td style="text-align: left;">DSS / Allocation</td>
+<td style="text-align: left;">Stockholm Env. Inst.</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Integrated water resources planning, scenario testing, and basin allocation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NASA POWER</strong></td>
+<td style="text-align: left;">Climate Dataset</td>
+<td style="text-align: left;">NASA</td>
+<td style="text-align: left;">Global</td>
+<td style="text-align: left;">Reliable solar and meteorological datasets for hydrology and agricultural modelling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TRMM &amp; GPM</strong></td>
+<td style="text-align: left;">Satellite Dataset</td>
+<td style="text-align: left;">NASA / JAXA</td>
+<td style="text-align: left;">Global (Tropical/Broad)</td>
+<td style="text-align: left;">Crucial for historical and real-time precipitation mapping from space.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Landsat &amp; Sentinel</strong></td>
+<td style="text-align: left;">Satellite Imagery</td>
+<td style="text-align: left;">USGS / Copernicus</td>
+<td style="text-align: left;">Global</td>
+<td style="text-align: left;">High-resolution optical imagery for land-use classification and surface water tracking.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ERA5</strong></td>
+<td style="text-align: left;">Climate Reanalysis</td>
+<td style="text-align: left;">ECMWF / Copernicus</td>
+<td style="text-align: left;">Global (1940-Present)</td>
+<td style="text-align: left;">Best-in-class historical climate data (precipitation, temperature, evaporation).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>India WRIS</strong></td>
+<td style="text-align: left;">Public Dataset</td>
+<td style="text-align: left;">Gov. of India</td>
+<td style="text-align: left;">India (Regional)</td>
+<td style="text-align: left;">Centralised portal for Indian river basin data, groundwater levels, and rainfall.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PEST</strong></td>
+<td style="text-align: left;">Calibration Tool</td>
+<td style="text-align: left;">Watermark Numerical</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Automates complex model calibration (like MODFLOW) and uncertainty analysis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TensorFlow / PyTorch</strong></td>
+<td style="text-align: left;">AI/ML Frameworks</td>
+<td style="text-align: left;">Google / Meta</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Building advanced deep learning models (like LSTMs) for streamflow/flood forecasting.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>geopandas</strong></td>
+<td style="text-align: left;">Python Library</td>
+<td style="text-align: left;">Open Source</td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Brings spatial data manipulation (shapefiles) directly into Python workflows.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong><i> Maintained by Apurv Bharadiya </i></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

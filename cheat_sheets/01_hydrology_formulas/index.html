@@ -1,0 +1,1873 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive compilation of open-source software and tools for Water Resources Engineering.">
+      
+      
+        <meta name="author" content="Apurv Bharadiya">
+      
+      
+      
+        <link rel="prev" href="../../hydraulic_models/hec_ras_master_guide/14_conclusion/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Master Cheat Sheet - Hydro-Resource-Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hydrology-fluid-mechanics-master-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydro-Resource-Hub" class="md-header__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydro-Resource-Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Master Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../hydraulic_models/hec_ras_master_guide/00_index/" class="md-tabs__link">
+          
+  
+  
+  🌊 HEC-RAS Master Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  📂 Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydro-Resource-Hub" class="md-nav__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydro-Resource-Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 HEC-RAS Master Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌊 HEC-RAS Master Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/00_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/02_installation_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02: Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/03_fundamental_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03: Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/04_data_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04: Data Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/05_interface_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/06_1d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06: 1D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/07_2d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/08_ras_mapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08: RAS Mapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/09_case_study_rajkot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09: Case Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/10_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10: Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/11_pro_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: Pro Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/12_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12: Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/13_github_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hydraulic_models/hec_ras_master_guide/14_conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14: Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📂 Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📂 Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-mechanics-pipe-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Fluid Mechanics &amp; Pipe Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌊 Fluid Mechanics &amp; Pipe Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bernoullis-equation-conservation-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bernoulli's Equation (Conservation of Energy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-darcy-weisbach-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Darcy-Weisbach Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hazen-williams-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hazen-Williams Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-channel-hydraulics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏞️ Open Channel Hydraulics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏞️ Open Channel Hydraulics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-mannings-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Manning's Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-froude-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Froude Number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-chezy-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Chézy Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface-water-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌧️ Surface Water Hydrology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌧️ Surface Water Hydrology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-scs-curve-number-cn-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. SCS Curve Number (CN) Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-green-ampt-infiltration-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Green-Ampt Infiltration Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-muskingum-routing-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Muskingum Routing Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-penman-monteith-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Penman-Monteith Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-rational-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Rational Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-hortons-infiltration-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Horton's Infiltration Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groundwater-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪨 Groundwater Hydrology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪨 Groundwater Hydrology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-darcys-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Darcy's Law
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-dupuit-equation-unconfined-aquifer-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Dupuit Equation (Unconfined Aquifer Flow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-theis-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Theis Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-thiem-equation-steady-state-confined-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Thiem Equation (Steady-State Confined Flow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-mechanics-pipe-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌊 Fluid Mechanics &amp; Pipe Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌊 Fluid Mechanics &amp; Pipe Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-bernoullis-equation-conservation-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bernoulli's Equation (Conservation of Energy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-darcy-weisbach-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Darcy-Weisbach Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hazen-williams-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hazen-Williams Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-channel-hydraulics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏞️ Open Channel Hydraulics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏞️ Open Channel Hydraulics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-mannings-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Manning's Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-froude-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Froude Number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-chezy-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Chézy Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface-water-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌧️ Surface Water Hydrology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌧️ Surface Water Hydrology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-scs-curve-number-cn-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. SCS Curve Number (CN) Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-green-ampt-infiltration-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Green-Ampt Infiltration Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-muskingum-routing-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Muskingum Routing Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-penman-monteith-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Penman-Monteith Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-rational-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Rational Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-hortons-infiltration-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Horton's Infiltration Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groundwater-hydrology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪨 Groundwater Hydrology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪨 Groundwater Hydrology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#13-darcys-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Darcy's Law
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-dupuit-equation-unconfined-aquifer-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Dupuit Equation (Unconfined Aquifer Flow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-theis-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Theis Equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-thiem-equation-steady-state-confined-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Thiem Equation (Steady-State Confined Flow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hydrology-fluid-mechanics-master-cheat-sheet">📐 Hydrology &amp; Fluid Mechanics Master Cheat Sheet</h1>
+<p>A comprehensive, deep-dive reference guide to the fundamental and advanced equations used in Water Resources Engineering, fluid dynamics, and computational modelling.</p>
+<hr />
+<h2 id="table-of-contents">📑 Table of Contents</h2>
+<ul>
+<li><a href="#-fluid-mechanics--pipe-flow">🌊 Fluid Mechanics &amp; Pipe Flow</a></li>
+<li><a href="#1-bernoullis-equation-conservation-of-energy">1. Bernoulli's Equation</a></li>
+<li><a href="#2-darcy-weisbach-equation">2. Darcy-Weisbach Equation</a></li>
+<li><a href="#3-hazen-williams-equation">3. Hazen-Williams Equation</a></li>
+<li><a href="#️-open-channel-hydraulics">🏞️ Open Channel Hydraulics</a></li>
+<li><a href="#4-mannings-equation">4. Manning's Equation</a></li>
+<li><a href="#5-froude-number">5. Froude Number</a></li>
+<li><a href="#6-chézy-equation">6. Chézy Equation</a></li>
+<li><a href="#️-surface-water-hydrology">🌧️ Surface Water Hydrology</a></li>
+<li><a href="#7-scs-curve-number-cn-method">7. SCS Curve Number (CN) Method</a></li>
+<li><a href="#8-green-ampt-infiltration-model">8. Green-Ampt Infiltration Model</a></li>
+<li><a href="#9-muskingum-routing-method">9. Muskingum Routing Method</a></li>
+<li><a href="#10-penman-monteith-equation">10. Penman-Monteith Equation</a></li>
+<li><a href="#11-rational-method">11. Rational Method</a></li>
+<li><a href="#12-hortons-infiltration-equation">12. Horton's Infiltration Equation</a></li>
+<li><a href="#-groundwater-hydrology">🪨 Groundwater Hydrology</a></li>
+<li><a href="#13-darcys-law">13. Darcy's Law</a></li>
+<li><a href="#14-dupuit-equation-unconfined-aquifer-flow">14. Dupuit Equation</a></li>
+<li><a href="#15-theis-equation">15. Theis Equation</a></li>
+<li><a href="#16-thiem-equation-steady-state-confined-flow">16. Thiem Equation</a></li>
+</ul>
+<hr />
+<h2 id="fluid-mechanics-pipe-flow">🌊 Fluid Mechanics &amp; Pipe Flow</h2>
+<h3 id="1-bernoullis-equation-conservation-of-energy">1. Bernoulli's Equation (Conservation of Energy)</h3>
+<p>Describes the behaviour of a fluid under varying conditions of pressure and height, stating that the total mechanical energy of a flowing fluid remains constant.</p>
+<p>$$\frac{P_1}{\gamma} + \frac{V_1^2}{2g} + z_1 = \frac{P_2}{\gamma} + \frac{V_2^2}{2g} + z_2 + h_f$$</p>
+<ul>
+<li>$P$ = Pressure ($N/m^2$)</li>
+<li>$\gamma$ = Specific weight of the fluid ($N/m^3$)</li>
+<li>$V$ = Fluid velocity ($m/s$)</li>
+<li>$z$ = Elevation head ($m$)</li>
+<li>$g$ = Acceleration due to gravity ($9.81m/s^2$)</li>
+<li>$h_f$ = Head loss due to friction ($m$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Published by Swiss mathematician <strong>Daniel Bernoulli</strong> in 1738 in his book <em>Hydrodynamica</em>.</li>
+<li><strong>✅ Primary Applications:</strong> Designing pipe networks, calculating pump head requirements, and understanding pitot tubes.</li>
+<li><strong>⚠️ Key Limitations:</strong> Cannot be used (in its strict theoretical form) for highly compressible fluids (gases at high speeds), highly viscous fluids, or flows where massive temperature changes occur.</li>
+</ul>
+</blockquote>
+<h3 id="2-darcy-weisbach-equation">2. Darcy-Weisbach Equation</h3>
+<p>The most theoretically robust equation for calculating the friction head loss in a pipe.</p>
+<p>$$h_f = f \frac{L}{D} \frac{V^2}{2g}$$</p>
+<ul>
+<li>$h_f$ = Head loss due to friction ($m$)</li>
+<li>$f$ = Darcy friction factor (dimensionless, found via Moody chart)</li>
+<li>$L$ = Length of the pipe ($m$)</li>
+<li>$D$ = Diameter of the pipe ($m$)</li>
+<li>$V$ = Average flow velocity ($m/s$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by <strong>Henry Darcy</strong> (1857) and modified by <strong>Julius Weisbach</strong> (1845).</li>
+<li><strong>✅ Primary Applications:</strong> Standard for modeling pressurized pipe systems.</li>
+<li><strong>⚠️ Key Limitations:</strong> Requires iterative calculations for $f$ if flow is turbulent; often swapped for Hazen-Williams in simple, cold-water municipal network design.</li>
+</ul>
+</blockquote>
+<h3 id="3-hazen-williams-equation">3. Hazen-Williams Equation</h3>
+<p>An empirical formula that relates the flow of water in a pipe with the physical properties of the pipe and the pressure drop caused by friction.</p>
+<p>$$V = 0.849 C R^{0.63} S^{0.54}$$</p>
+<ul>
+<li>$V$ = Average velocity ($m/s$)</li>
+<li>$C$ = Hazen-Williams roughness coefficient (empirical, depends on pipe material)</li>
+<li>$R$ = Hydraulic radius ($m$)</li>
+<li>$S$ = Slope of the energy grade line (head loss per length of pipe, $h_f/L$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by <strong>Allen Hazen</strong> and <strong>Gardner Stewart Williams</strong> in the early 1900s.</li>
+<li><strong>✅ Primary Applications:</strong> The default equation used in EPANET and civil engineering practice for municipal water distribution networks.</li>
+<li><strong>⚠️ Key Limitations:</strong> Only valid for water at ordinary temperatures (around $15^\circ C$) and turbulent flow. Completely invalid for highly viscous fluids (like oil) or hot water.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="open-channel-hydraulics">🏞️ Open Channel Hydraulics</h2>
+<h3 id="4-mannings-equation">4. Manning's Equation</h3>
+<p>An empirical equation used to calculate the average velocity of liquid flowing in an open channel driven by gravity.</p>
+<p>$$V = \frac{1}{n} R^{2/3} S^{1/2}$$</p>
+<ul>
+<li>$V$ = Average velocity ($m/s$)</li>
+<li>$n$ = Manning's roughness coefficient (empirical)</li>
+<li>$R$ = Hydraulic radius ($A/P$) ($m$)</li>
+<li>$S$ = Channel bed slope ($m/m$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Proposed by Irish engineer <strong>Robert Manning</strong> in 1889.</li>
+<li><strong>✅ Primary Applications:</strong> The absolute backbone of open channel flow modelling (HEC-RAS, SWMM), sewer design, and flood routing.</li>
+<li><strong>⚠️ Key Limitations:</strong> Invalid for pressurised flow, flows with extremely high sediment loads (mudflows), or steep mountain torrents where water cascades rather than flows smoothly.</li>
+</ul>
+</blockquote>
+<h3 id="5-froude-number">5. Froude Number</h3>
+<p>A dimensionless number used to determine the flow regime (subcritical, critical, or supercritical) in open channels, based on the ratio of inertial forces to gravitational forces.</p>
+<p>$$Fr = \frac{V}{\sqrt{g y}}$$</p>
+<ul>
+<li>$Fr$ = Froude Number (dimensionless)</li>
+<li>$V$ = Flow velocity (m/s)</li>
+<li>$g$ = Acceleration due to gravity (9.81 m/s²)</li>
+<li>$y$ = Hydraulic depth (Cross-sectional area / Top width) (m)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Named after English engineer <strong>William Froude</strong> in the mid-1800s (originally for ship hull resistance, later adapted for open channels).</li>
+<li><strong>✅ Primary Applications:</strong> Essential for designing spillways, predicting hydraulic jumps, and classifying flow states.</li>
+<li><strong>⚠️ Key Limitations:</strong> Does not apply to pressurised pipe flow or closed-conduit systems. </li>
+</ul>
+</blockquote>
+<h3 id="6-chezy-equation">6. Chézy Equation</h3>
+<p>A pioneering empirical equation for estimating the velocity of uniform flow in an open channel.</p>
+<p>$$V = C \sqrt{R S}$$</p>
+<ul>
+<li>$V$ = Average flow velocity (m/s)</li>
+<li>$C$ = Chézy's roughness coefficient (depends on channel surface)</li>
+<li>$R$ = Hydraulic radius (m)</li>
+<li>$S$ = Channel bed slope (m/m)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by French engineer <strong>Antoine de Chézy</strong> in 1769 while designing a canal to supply water to Paris.</li>
+<li><strong>✅ Primary Applications:</strong> Theoretical open channel design and historical hydraulic studies. It laid the mathematical foundation for Manning's equation.</li>
+<li><strong>⚠️ Key Limitations:</strong> Largely superseded by Manning's equation in modern engineering because the Chézy coefficient ($C$) is harder to accurately estimate across varying water depths than Manning's $n$.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="surface-water-hydrology">🌧️ Surface Water Hydrology</h2>
+<h3 id="7-scs-curve-number-cn-method">7. SCS Curve Number (CN) Method</h3>
+<p>An empirical method for predicting direct runoff or infiltration from rainfall excess.</p>
+<p>$$Q = \frac{(P - I_a)^2}{(P - I_a + S)}$$</p>
+<ul>
+<li>$Q$ = Runoff depth ($mm$)</li>
+<li>$P$ = Total rainfall depth ($mm$)</li>
+<li>$I_a$ = Initial abstraction (commonly assumed as $0.2S$) ($mm$)</li>
+<li>$S$ = Potential maximum retention after runoff begins, where $S = \frac{25400}{CN} - 254$</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by the <strong>USDA Soil Conservation Service</strong> (now NRCS) in 1954.</li>
+<li><strong>✅ Primary Applications:</strong> Estimating runoff for ungauged agricultural or urban watersheds based on soil type and land cover.</li>
+<li><strong>⚠️ Key Limitations:</strong> Not accurate for very large watersheds, highly forested areas with massive leaf litter, or purely concrete urban areas.</li>
+</ul>
+</blockquote>
+<h3 id="8-green-ampt-infiltration-model">8. Green-Ampt Infiltration Model</h3>
+<p>A physically-based model estimating the rate at which water enters the soil, assuming a sharp wetting front.</p>
+<p>$$f(t) = K \left( 1 + \frac{|\psi| \Delta \theta}{F(t)} \right)$$</p>
+<ul>
+<li>$f(t)$ = Infiltration rate at time $t$ ($cm/hr$)</li>
+<li>$K$ = Saturated hydraulic conductivity ($cm/hr$)</li>
+<li>$\psi$ = Suction head at the wetting front ($cm$)</li>
+<li>$\Delta \theta$ = Change in volumetric moisture content (porosity minus initial moisture)</li>
+<li>$F(t)$ = Cumulative depth of infiltrated water ($cm$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by <strong>W.H. Green</strong> and <strong>G.A. Ampt</strong> in 1911.</li>
+<li><strong>✅ Primary Applications:</strong> Advanced rainfall-runoff modelling (like SWMM) where continuous simulation of soil moisture is required over long periods.</li>
+<li><strong>⚠️ Key Limitations:</strong> Cumbersome for quick, single-storm estimates because it requires solving implicitly. Fails in highly layered soils or soils with massive macropores (like deep root channels).</li>
+</ul>
+</blockquote>
+<h3 id="9-muskingum-routing-method">9. Muskingum Routing Method</h3>
+<p>A widely used hydrologic routing method that models the storage volume of flooding in a river channel to predict how a flood wave changes as it moves downstream.</p>
+<p>$$Q_{i+1} = C_1 I_{i+1} + C_2 I_i + C_3 Q_i$$</p>
+<ul>
+<li>$Q$ = Outflow discharge</li>
+<li>$I$ = Inflow discharge</li>
+<li>$C_1, C_2, C_3$ = Routing coefficients derived from $\Delta t$, travel time ($K$), and a weighting factor ($X$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by <strong>G.T. McCarthy</strong> in 1938 for the US Army Corps of Engineers during a study of the Muskingum River basin.</li>
+<li><strong>✅ Primary Applications:</strong> Routing flood hydrographs through long river reaches without needing full cross-sectional geometry.</li>
+<li><strong>⚠️ Key Limitations:</strong> Fails if there is a significant backwater effect (like from a downstream dam or tidal influence). In such cases, full dynamic hydraulic routing (HEC-RAS 1D/2D) is mandatory.</li>
+</ul>
+</blockquote>
+<h3 id="10-penman-monteith-equation">10. Penman-Monteith Equation</h3>
+<p>The gold standard for estimating reference Evapotranspiration ($ET_0$).</p>
+<p>$$ET_0 = \frac{\Delta (R_n - G) + \rho_a c_p \frac{(e_s - e_a)}{r_a}}{\Delta + \gamma \left(1 + \frac{r_s}{r_a}\right)}$$</p>
+<ul>
+<li>$ET_0$ = Reference evapotranspiration ($mm/day$)</li>
+<li>$R_n$ = Net radiation at the crop surface ($MJ/m^2/day$)</li>
+<li>$G$ = Soil heat flux density</li>
+<li>$e_s - e_a$ = Vapour pressure deficit of the air</li>
+<li>$\Delta$ = Slope of the vapour pressure curve</li>
+<li>$\gamma$ = Psychrometric constant</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Derived by <strong>Howard Penman</strong> (1948) and refined for crop resistance by <strong>John Monteith</strong> (1965).</li>
+<li><strong>✅ Primary Applications:</strong> Irrigation scheduling, drought modelling, and climate change impact studies. Endorsed by the FAO.</li>
+<li><strong>⚠️ Key Limitations:</strong> Do not use if you lack comprehensive meteorological data (solar radiation, wind speed, humidity). </li>
+</ul>
+</blockquote>
+<h3 id="11-rational-method">11. Rational Method</h3>
+<p>The most widely used uncalibrated equation for estimating peak surface runoff from a small watershed due to a specific storm event.</p>
+<p>$$Q_p = C i A$$</p>
+<ul>
+<li>$Q_p$ = Peak runoff rate (m³/s)</li>
+<li>$C$ = Runoff coefficient (dimensionless, based on land use and surface permeability)</li>
+<li>$i$ = Rainfall intensity for a duration equal to the time of concentration (m/s, though typically calculated in mm/hr and converted)</li>
+<li>$A$ = Drainage area (m²)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Introduced by Irish engineer <strong>Thomas Mulvaney</strong> in 1851, and popularised in the US by Emil Kuichling in 1889.</li>
+<li><strong>✅ Primary Applications:</strong> Sizing storm sewers, road culverts, and small urban drainage systems where the catchment area is very small (typically less than 80 hectares / 200 acres).</li>
+<li><strong>⚠️ Key Limitations:</strong> Highly inaccurate for large river basins or watersheds with complex, mixed land uses. It assumes rainfall intensity is perfectly uniform over the entire catchment, which never happens in large storms.</li>
+</ul>
+</blockquote>
+<h3 id="12-hortons-infiltration-equation">12. Horton's Infiltration Equation</h3>
+<p>A classic empirical formula that models the exponential decline of soil infiltration capacity over time during a continuous rain event.</p>
+<p>$$f(t) = f_c + (f_0 - f_c)e^{-kt}$$</p>
+<ul>
+<li>$f(t)$ = Infiltration capacity at time $t$ (mm/hr)</li>
+<li>$f_c$ = Final (equilibrium) infiltration capacity (mm/hr)</li>
+<li>$f_0$ = Initial infiltration capacity at $t=0$ (mm/hr)</li>
+<li>$k$ = Decay constant specific to the soil type (1/hr)</li>
+<li>$t$ = Time since the start of rainfall (hr)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by American hydrologist <strong>Robert E. Horton</strong> in 1933.</li>
+<li><strong>✅ Primary Applications:</strong> Continuous rainfall-runoff modelling where you need to calculate how much water pools on the surface over the lifespan of a storm. </li>
+<li><strong>⚠️ Key Limitations:</strong> Fails if the rainfall intensity temporarily drops below the soil's infiltration capacity (because the soil will begin to dry and "recover," which this strict exponential decay curve does not account for).</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="groundwater-hydrology">🪨 Groundwater Hydrology</h2>
+<h3 id="13-darcys-law">13. Darcy's Law</h3>
+<p>The foundational equation governing the flow of fluid through a porous medium.</p>
+<p>$$Q = -K A \frac{dh}{dl}$$</p>
+<ul>
+<li>$Q$ = Total discharge ($m^3/s$)</li>
+<li>$K$ = Hydraulic conductivity ($m/s$)</li>
+<li>$A$ = Cross-sectional area to flow ($m^2$)</li>
+<li>$\frac{dh}{dl}$ = Hydraulic gradient </li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Discovered experimentally by French engineer <strong>Henry Darcy</strong> in 1856, based on sand filters in Dijon, France.</li>
+<li><strong>✅ Primary Applications:</strong> The mathematical basis for all groundwater models (like MODFLOW) and calculating seepage under dams.</li>
+<li><strong>⚠️ Key Limitations:</strong> Invalid for turbulent flow (e.g., in highly fractured karst/limestone aquifers or right next to a heavily pumping well).</li>
+</ul>
+</blockquote>
+<h3 id="14-dupuit-equation-unconfined-aquifer-flow">14. Dupuit Equation (Unconfined Aquifer Flow)</h3>
+<p>Calculates the steady-state groundwater discharge per unit width between two observation wells in an unconfined aquifer.</p>
+<p>$$q = \frac{K}{2L} (h_1^2 - h_2^2)$$</p>
+<ul>
+<li>$q$ = Discharge per unit width ($m^2/s$)</li>
+<li>$K$ = Hydraulic conductivity ($m/s$)</li>
+<li>$L$ = Distance between the two wells/observation points ($m$)</li>
+<li>$h_1, h_2$ = Hydraulic heads at points 1 and 2 ($m$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Formulated by <strong>Jules Dupuit</strong> in 1863 based on the assumption that groundwater flow is perfectly horizontal.</li>
+<li><strong>✅ Primary Applications:</strong> Estimating regional groundwater flow towards a trench, river, or drain in a shallow, unconfined aquifer.</li>
+<li><strong>⚠️ Key Limitations:</strong> Invalid where flow is highly vertical (like directly adjacent to a pumping well or near the water table's intersection with a seepage face).</li>
+</ul>
+</blockquote>
+<h3 id="15-theis-equation">15. Theis Equation</h3>
+<p>Used to predict the drawdown (decline in water level) in a confined aquifer due to pumping from a single well.</p>
+<p>$$s = \frac{Q}{4 \pi T} W(u) \quad \text{where} \quad u = \frac{r^2 S}{4 T t}$$</p>
+<ul>
+<li>$s$ = Drawdown ($m$)</li>
+<li>$Q$ = Constant pumping rate ($m^3/day$)</li>
+<li>$T$ = Transmissivity ($m^2/day$)</li>
+<li>$S$ = Storativity (dimensionless)</li>
+<li>$W(u)$ = The Well function</li>
+<li>$r$ = Distance from the pumped well ($m$)</li>
+<li>$t$ = Time since pumping began ($days$)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by <strong>Charles Vernon Theis</strong> in 1935, applying heat-flow mathematics to groundwater.</li>
+<li><strong>✅ Primary Applications:</strong> Conducting aquifer pump tests to determine the hydraulic properties of a confined aquifer over time (transient flow).</li>
+<li><strong>⚠️ Key Limitations:</strong> Invalid for unconfined aquifers, aquifers that are not uniform/isotropic, or if the pumping rate fluctuates wildly.</li>
+</ul>
+</blockquote>
+<h3 id="16-thiem-equation-steady-state-confined-flow">16. Thiem Equation (Steady-State Confined Flow)</h3>
+<p>Calculates the transmissivity of a confined aquifer based on the steady-state drawdown observed in two monitoring wells.</p>
+<p>$$Q = \frac{2 \pi T (h_2 - h_1)}{\ln(r_2 / r_1)}$$</p>
+<ul>
+<li>$Q$ = Constant pumping rate from the main well (m³/day)</li>
+<li>$T$ = Transmissivity of the aquifer (m²/day)</li>
+<li>$h_1, h_2$ = Hydraulic heads at observation wells 1 and 2 (m)</li>
+<li>$r_1, r_2$ = Radial distances from the pumping well to observation wells 1 and 2 (m)</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>📜 Historical Context:</strong> Developed by German hydrologist <strong>Günther Thiem</strong> in 1906, adapting the earlier work of Jules Dupuit.</li>
+<li><strong>✅ Primary Applications:</strong> Analysing aquifer pump test data after the water levels have completely stabilised (reached steady-state) to determine how easily water moves through the confined rock/sand.</li>
+<li><strong>⚠️ Key Limitations:</strong> Cannot be used during the initial hours/days of a pump test when water levels are still actively dropping (you must use the Theis equation for that transient state). Invalid for unconfined aquifers.</li>
+</ul>
+</blockquote>
+<div style="display:none;">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

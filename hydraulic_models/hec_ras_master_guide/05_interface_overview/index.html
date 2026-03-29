@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive compilation of open-source software and tools for Water Resources Engineering.">
+      
+      
+        <meta name="author" content="Apurv Bharadiya">
+      
+      
+      
+        <link rel="prev" href="../04_data_requirements/">
+      
+      
+        <link rel="next" href="../06_1d_modeling/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 05: Interface - Hydro-Resource-Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-hec-ras-interface-architecture-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-header__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydro-Resource-Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 05: Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00_index/" class="md-tabs__link">
+          
+  
+  
+  🌊 HEC-RAS Master Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-tabs__link">
+          
+  
+  
+  📂 Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydro-Resource-Hub" class="md-nav__button md-logo" aria-label="Hydro-Resource-Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydro-Resource-Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 HEC-RAS Master Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌊 HEC-RAS Master Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 01: Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_installation_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 02: Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_fundamental_concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 03: Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_data_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 04: Data Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 05: Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-modular-file-architecture-crucial-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Modular File Architecture (Crucial for GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-main-menu-the-command-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Main Menu (The Command Hub)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Main Menu (The Command Hub)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-workflows-in-the-main-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Workflows in the Main Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-geometric-data-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Geometric Data Editor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Geometric Data Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-flow-data-editors-steady-unsteady" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Flow Data Editors (Steady &amp; Unsteady)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. The Flow Data Editors (Steady &amp; Unsteady)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-steady-flow-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Steady Flow Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unsteady-flow-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unsteady Flow Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ras-mapper-the-gis-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. RAS Mapper (The GIS Powerhouse)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. RAS Mapper (The GIS Powerhouse)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-mistake-the-two-geometry-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Common Mistake: The Two Geometry Editors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_1d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 06: 1D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_2d_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 07: 2D Modelling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_ras_mapper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 08: RAS Mapper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_case_study_rajkot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 09: Case Study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10: Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_pro_tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: Pro Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12: Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_github_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13: GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14: Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📂 Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📂 Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cheat_sheets/01_hydrology_formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-modular-file-architecture-crucial-for-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Modular File Architecture (Crucial for GitHub)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-main-menu-the-command-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Main Menu (The Command Hub)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Main Menu (The Command Hub)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-workflows-in-the-main-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Workflows in the Main Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-geometric-data-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Geometric Data Editor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Geometric Data Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-flow-data-editors-steady-unsteady" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Flow Data Editors (Steady &amp; Unsteady)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. The Flow Data Editors (Steady &amp; Unsteady)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-steady-flow-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Steady Flow Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unsteady-flow-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Unsteady Flow Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ras-mapper-the-gis-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. RAS Mapper (The GIS Powerhouse)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. RAS Mapper (The GIS Powerhouse)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-mistake-the-two-geometry-editors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Common Mistake: The Two Geometry Editors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-5-hec-ras-interface-architecture-overview">🖥️ Chapter 5: HEC-RAS Interface &amp; Architecture Overview</h1>
+<blockquote>
+<p>💡 <strong>Pro Tip:</strong> Unlike modern CAD software (such as AutoCAD or Civil3D), where everything happens in a single window, <a href="https://www.hec.usace.army.mil/software/hec-ras/">HEC-RAS</a> is intentionally <strong>modular</strong>. It mathematically separates the physical earth (Geometry) from the water entering it (Flow). This architecture allows an engineer to build one highly detailed river geometry and test dozens of different storm scenarios against it without duplicating massive terrain datasets.</p>
+</blockquote>
+<p>To master the software, you must understand its four primary control centres and the specific files they generate.</p>
+<hr />
+<h2 id="1-the-modular-file-architecture-crucial-for-github">1. The Modular File Architecture (Crucial for GitHub)</h2>
+<p>Before clicking any buttons, you must understand how HEC-RAS saves its brain. When you save a project, it does not create one giant file. It creates a web of interconnected text and binary files. </p>
+<p>Understanding this is critical for version control and uploading your model to a repository.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">File Type</th>
+<th style="text-align: left;">Extension</th>
+<th style="text-align: left;">What it Contains</th>
+<th style="text-align: left;">Engineering Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Project File</strong></td>
+<td style="text-align: left;"><code>.prj</code></td>
+<td style="text-align: left;">File associations and Unit System.</td>
+<td style="text-align: left;">The "glue" that tells the software which Geometry connects to which Flow.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Geometry File</strong></td>
+<td style="text-align: left;"><code>.g01</code>, <code>.g02</code></td>
+<td style="text-align: left;">Cross-sections, 2D meshes, bridges.</td>
+<td style="text-align: left;">The physical container (the river and floodplain).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Flow File</strong></td>
+<td style="text-align: left;"><code>.f01</code> (Steady)<br><code>.u01</code> (Unsteady)</td>
+<td style="text-align: left;">Discharges, hydrographs, boundary conditions.</td>
+<td style="text-align: left;">The water is being pushed through the container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Plan File</strong></td>
+<td style="text-align: left;"><code>.p01</code>, <code>.p02</code></td>
+<td style="text-align: left;">Computation settings, time steps, tolerances.</td>
+<td style="text-align: left;">The exact simulation settings used to combine a specific Geometry and Flow.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HDF Results</strong></td>
+<td style="text-align: left;"><code>.p01.hdf</code></td>
+<td style="text-align: left;">Massive binary arrays of depths and velocities.</td>
+<td style="text-align: left;">The actual calculated results are mapped to your 2D grid. (Do <strong>not</strong> upload to GitHub due to size).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-the-main-menu-the-command-hub">2. The Main Menu (The Command Hub)</h2>
+<p>This is the small, rectangular window that opens when you first launch the software. It acts as the central dispatch station.</p>
+<h3 id="key-workflows-in-the-main-menu">Key Workflows in the Main Menu</h3>
+<ul>
+<li><strong>Setting the Unit System:</strong> ⚠️ <strong>CRITICAL STEP.</strong> Before you draw a single line, go to <code>Options &gt; Unit System</code> and select <strong>System International (Metric System)</strong>. If you accidentally leave it in US Customary (Feet) and import a Metric DEM from <a href="https://bhuvan.nrsc.gov.in/">Bhuvan ISRO</a>, a 300-meter-wide river will be calculated as a 300-foot-wide river, and your model is ruined.</li>
+<li><strong>Launching Modules:</strong> The toolbar icons launch the Geometry Editor, Flow Editors, and RAS Mapper.</li>
+<li><strong>Saving the Project:</strong> When you select <code>File &gt; Save Project</code>, it only saves the <code>.prj</code> file. You must save Geometry and Flow files separately within their respective editors.</li>
+</ul>
+<hr />
+<h2 id="3-the-geometric-data-editor">3. The Geometric Data Editor</h2>
+<p>This is the classic 1D editor where you construct the physical world. While newer 2D tools exist in RAS Mapper, the Geometric Data Editor remains essential for structural inputs.</p>
+<h3 id="core-functions">Core Functions</h3>
+<ul>
+<li><strong>River Centerlines &amp; Cross-Sections:</strong> You can manually draw the stream routing and cut cross-sections perpendicular to the flow. </li>
+<li><strong>Hydraulic Structures:</strong> This editor is mandatory for adding <strong>Inline Structures</strong> (Dams/Weirs), <strong>Lateral Structures</strong> (Levees that spill water out of the river into a 2D area), and <strong>Bridges/Culverts</strong>.</li>
+<li><strong>Manning's Roughness ($n$):</strong> You assign friction values directly to your 1D cross-section stations here.</li>
+</ul>
+<blockquote>
+<p>📌 <strong>Important Note:</strong> The Geometric Data Editor does not know that water exists. It only processes mathematical station-elevation coordinates (X, Y, Z) and friction. </p>
+</blockquote>
+<hr />
+<h2 id="4-the-flow-data-editors-steady-unsteady">4. The Flow Data Editors (Steady &amp; Unsteady)</h2>
+<p>This is where you introduce hydrologic forces into your system. </p>
+<h3 id="the-steady-flow-editor">The Steady Flow Editor</h3>
+<p>Used for calculating the absolute maximum water surface elevation of a constant peak discharge.
+* <strong>Input:</strong> A single flow rate (e.g., $500 \text{ m}^3/\text{s}$).
+* <strong>Boundary Condition:</strong> You must provide a Downstream Boundary condition, typically <strong>Normal Depth</strong>. You calculate this by measuring the average slope of your channel bed over the last few kilometres using <a href="https://qgis.org/">QGIS</a> or RAS Mapper.</p>
+<h3 id="the-unsteady-flow-editor">The Unsteady Flow Editor</h3>
+<p>Used for dynamic flood routing, dam breaks, and modelling how floodplains store water over time.
+* <strong>Input:</strong> Time-series Hydrographs (from external sources like <a href="https://waterdata.usgs.gov/nwis">USGS Water Data</a>).
+* <strong>Boundary Condition:</strong> You apply the hydrograph at the upstream end and a Friction Slope or Stage Hydrograph at the downstream end.
+* <strong>Initial Conditions:</strong> You must set a starting flow rate for the entire system to prevent the mathematical matrix from dividing by zero (The "Dry Bed" crash).</p>
+<hr />
+<h2 id="5-ras-mapper-the-gis-powerhouse">5. RAS Mapper (The GIS Powerhouse)</h2>
+<p>Introduced in Version 5.0, RAS Mapper fundamentally transformed hydraulic engineering. It is a fully integrated spatial environment built directly into the software, eliminating the heavy reliance on external tools like <a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview">ArcGIS Pro</a> for basic extraction.</p>
+<h3 id="core-capabilities">Core Capabilities</h3>
+<ol>
+<li><strong>Terrain Generation:</strong> You import your raw GeoTIFF DEMs here to create a proprietary HEC-RAS Terrain <code>.hdf</code> file. </li>
+<li><strong>2D Mesh Generation:</strong> You draw your 2D Flow Area polygons, generate the computational grid (e.g., $15\text{m} \times 15\text{m}$ cells), and enforce breaklines along elevated roads.</li>
+<li><strong>Spatial Manning's $n$:</strong> You import Land Use/Land Cover shapefiles to automatically assign friction values across millions of 2D cells simultaneously.</li>
+<li><strong>Results Visualisation:</strong> Once a simulation finishes, RAS Mapper animates the flood wave, allowing you to query water depths, flow velocities, and shear stress at any specific pixel in real-time.</li>
+</ol>
+<h3 id="common-mistake-the-two-geometry-editors">🚨 Common Mistake: The Two Geometry Editors</h3>
+<p>A massive point of confusion for beginners: You can edit geometry in <em>both</em> the Geometric Data Editor and RAS Mapper. 
+* <strong>The Rule of Thumb:</strong> Use <strong>RAS Mapper</strong> for anything spatial/2D (drawing meshes, breaklines, importing DEMs). Use the <strong>Geometric Data Editor</strong> for anything structural/1D (bridges, culverts, dam gates, weir coefficients). </p>
+<p><br></p>
+<hr />
+<p><strong><a href="../04_data_requirements/">⬅️ Chapter 04: Data Requirements</a></strong> | <strong><a href="../00_index/">🏠 Main Index</a></strong> | <strong><a href="../06_1d_modeling/">Chapter 06: 1D Modelling Workflow ➡️</a></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
