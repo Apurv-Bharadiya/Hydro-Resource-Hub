@@ -4,8 +4,7 @@
   <img src="https://img.shields.io/badge/Domain-Water%20Resources%20Engineering-00C9FF?style=flat-square&logo=qgis&logoColor=white&labelColor=0055ff" alt="Domain">
   <img src="https://img.shields.io/badge/Ecosystem-Open%20Source-10B981?style=flat-square&logo=github&logoColor=white&labelColor=047857" alt="Ecosystem">
   <img src="https://img.shields.io/badge/Scale-Planetary%20Data-8B5CF6?style=flat-square&logo=googleearth&logoColor=white&labelColor=5B21B6" alt="Scale">
-  
-  [![DOI](https://zenodo.org/badge/1192705522.svg)](https://doi.org/10.5281/zenodo.19315067)
+  <a href="https://doi.org/10.5281/zenodo.19315067"><img src="https://zenodo.org/badge/1192705522.svg" alt="DOI"></a>
 </div>
 
 <div align="center">
