@@ -18,7 +18,7 @@
 
 ## 🚀 Featured: The Ultimate HEC-RAS Master Guide
 
-<div align="center">
+<div>
   <img src="https://img.shields.io/badge/Level-Beginner%20to%20Advanced-2EA043?style=flat-square&logo=gitbook&logoColor=white&labelColor=238636" alt="Level">
   <img src="https://img.shields.io/badge/Estimated%20Time-45%20Minutes-007EC6?style=flat-square&logo=clockify&logoColor=white&labelColor=005A9E" alt="Estimated Time">
   <img src="https://img.shields.io/badge/Domain-Hydraulic%20Engineering-F59E0B?style=flat-square&logo=digitalocean&logoColor=white&labelColor=B45309" alt="Domain">
@@ -71,6 +71,8 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## 🗺️ GIS & Spatial Analysis
 
+Every hydrological model begins with a spatial understanding of the terrain. Geographic Information Systems (GIS) are the bedrock of modern Water Resources Engineering, allowing researchers to delineate watersheds, process Digital Elevation Models (DEMs), and map flood inundation zones before any fluid mechanics equations are even applied.
+
 | **Resource** | **Description** |
 | :--- | :--- |
 | **[QGIS](https://qgis.org/)** | A professional-grade, open-source Geographic Information System (GIS). Essential for manipulating spatial data, mapping flood zones, and preparing digital elevation models (DEMs) before importing them into hydrological models. |
@@ -82,6 +84,8 @@ We have built actual starter code and reference guides directly into this reposi
 ---
 
 ## 🌊 Hydrological & Hydraulic Modelling
+
+This is the computational core of water engineering. Hydrological models simulate the rainfall-runoff process across a catchment, while hydraulic models route that water through rivers, pipes, and channels. Together, they allow us to design resilient infrastructure and forecast flood events under changing climate scenarios.
 
 | **Resource** | **Description** |
 | :--- | :--- |
@@ -97,6 +101,8 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## 🧪 Water Quality & Environmental Modelling
 
+Modern water management must address quality, not just quantity. These modelling tools simulate the transport and fate of pollutants, nutrients, and thermal changes in water bodies. They are critical for environmental impact assessments, protecting aquatic ecosystems, and ensuring safe municipal water supplies.
+
 | **Resource** | **Description** |
 | :--- | :--- |
 | **[EPANET](https://www.epa.gov/water-research/epanet)** | A widely used software application used to model the hydraulic and water quality behaviour of pressurised water distribution piping systems. |
@@ -109,6 +115,8 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## ⚖️ Decision Support Systems (DSS) & Water Allocation
 
+Engineering meets policy. When water becomes scarce, balancing the competing demands of agriculture, urban centres, and industry requires rigorous optimisation. Decision Support Systems provide a framework for scenario testing, helping stakeholders make data-driven allocation policies and manage reservoir operations.
+
 | **Resource** | **Description** |
 | :--- | :--- |
 | **[WEAP](https://www.weap21.org/)** | Water Evaluation And Planning system. A user-friendly tool that takes an integrated approach to water resources planning. |
@@ -119,6 +127,8 @@ We have built actual starter code and reference guides directly into this reposi
 ---
 
 ## 🛰️ Public Datasets, Remote Sensing & Climate Data
+
+A model is only as good as its input data. With physical stream gauges becoming sparse or unreliable in many regions, remote sensing and planetary-scale satellite data have become the lifeblood of hydrological research. These public datasets provide critical historical and real-time inputs for precipitation, evapotranspiration, and land-cover.
 
 | **Resource** | **Description** |
 | :--- | :--- |
@@ -137,6 +147,8 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## 🎯 Model Calibration & Uncertainty Analysis
 
+Uncalibrated models are merely hypotheses. To transition a model from a theoretical exercise to a reliable predictive tool, it must be rigorously calibrated against observed historical data. These tools automate complex parameter estimation and quantify the inherent uncertainty in our hydrological predictions.
+
 | **Resource** | **Description** |
 | :--- | :--- |
 | **[PEST](https://pesthomepage.org/)** | The industry standard for Model-Independent Parameter Estimation and Uncertainty Analysis. It automates the calibration of models like MODFLOW. |
@@ -145,6 +157,8 @@ We have built actual starter code and reference guides directly into this reposi
 ---
 
 ## 🐍 Python Libraries for Water Engineers
+
+Python has radically transformed hydro-informatics. By shifting away from tedious point-and-click GUI workflows, engineers can use Python to automate spatial geoprocessing, rapidly clean massive climate datasets, and build reproducible, open-source modelling pipelines.
 
 | **Resource** | **Description** |
 | :--- | :--- |
@@ -157,7 +171,7 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## 📈 R Packages for Statistical Hydrology
 
-*While Python is great for spatial analysis, R is deeply ingrained in academic hydrology for statistical analysis.*
+While Python dominates spatial automation, R remains deeply entrenched in academic hydrology for its unparalleled statistical capabilities. These packages are essential for rigorous frequency analysis, flow duration curves, and calculating goodness-of-fit metrics for model validation.
 
 | **Resource** | **Description** |
 | :--- | :--- |
@@ -169,7 +183,7 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## 🤖 Emerging Tech: AI & Machine Learning in Hydrology
 
-*As hydrological data grows, ML is increasingly used for streamflow prediction, gap-filling data, and flood forecasting.*
+The frontier of water resources engineering is increasingly data-driven. Machine Learning algorithms are beginning to augment, and in some cases outperform, traditional physics-based models—especially in rapid streamflow forecasting and gap-filling incomplete historical datasets.
 
 | **Resource** | **Description** |
 | :--- | :--- |
@@ -180,6 +194,8 @@ We have built actual starter code and reference guides directly into this reposi
 
 ## ☁️ Web Tools & Cloud Platforms
 
+The era of desktop-bound modelling is ending. Cloud platforms allow engineers to bypass local hardware limitations, running massive parallel simulations and sharing dynamic, interactive dashboards directly with stakeholders and policymakers.
+
 | **Resource** | **Description** |
 | :--- | :--- |
 | **[HydroServer](https://hydroserver.org/)** | A suite of software applications for publishing and sharing hydrologic datasets on the web. |
@@ -188,6 +204,8 @@ We have built actual starter code and reference guides directly into this reposi
 ---
 
 ## 📚 Open Educational Resources
+
+Continuous learning is vital in an industry transformed by digital tech. These open-source platforms and consortiums democratize access to advanced hydrological science, ensuring that graduate researchers and practitioners have the training needed to tackle complex water challenges.
 
 | **Resource** | **Description** |
 | :--- | :--- |
